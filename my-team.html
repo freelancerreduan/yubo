@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>My team</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+ 
+    <style>
+.vcenter{
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+.vcenter-left{
+  display:flex;
+  align-items:center;
+  justify-content:left
+}
+.vcenter-right{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end
+}
+.vcenter-bottom{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+.vcenter-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+}
+.vcenter-top-left{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+.vcenter-top-right{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-end;
+}
+.vcenter-bottom-left{
+    display:flex;
+  align-items:flex-end;
+  justify-content:left;
+}
+.vcenter-bottom-right{
+    display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+}
+.btn_{
+    background:linear-gradient(90deg, #07B8A4 1.38%, #0EC77B 100%);box-shadow: 0px 6px 8px rgba(7,184,164,0.14);border-radius:8px;
+}
+    </style>
+    <script>
+    function setDiv(id){
+        $("#div_1").css("display","none");
+        $("#div_2").css("display","none");
+        $("#div_3").css("display","none");
+        $("#div_"+id).css("display","flex");
+    }
+    function np(p){
+        window.location.href="/index/user/tuijian.html?page="+p;
+    }
+    
+</script>
+</head>
+
+<body class="index"  style="background-color:#fff;padding-top:50px">
+
+<div class="header"  >  
+    <div class="wp" style="background-color:#fff">
+        <span class="menuBtn" ></span> 
+              <div class="vcenter-right"  onclick="javascript:window.location.href='/index/user/tjinfo6';" style="width:120px;height:45px;position:absolute;right:0px">
+            <font class="btn_" style="margin-right:10px;color:#eeeeee;font-size:13px;padding-left:5px;padding-right:5px;height:30px;border-radius:5px;padding-top:4px">Rules</font>
+        </div>
+        <div class="vcenter" style="width:100%;height:45px;">
+            <p style="font-size:20px;background: linear-gradient(90deg, #07B8A4 1.38%, #0EC77B 100%);background-clip: text;color: transparent;-webkit-background-clip: text;font-weight:bold;transform: scale(.9)">My team</p> 
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="vcenter" style="width:100%;margin-top:10px">
+    <div style="width:90%;height:60px;">
+       
+        
+         <div class="vcenter-left" style="width:100%;min-height:30px;">
+             <font style="color:#09bd96;font-weight:bold">My Referral Code：VQ104513</font>
+        </div>
+      
+        <div class="vcenter-left" style="width:100%;height:20px;overflow: hidden;text-align:left">
+            <div style="">
+                <font style="color:#09bd96;font-weight:bold">Share Url：</font>
+            </div>
+            <div style="max-width:50%;overflow: hidden;white-space: nowrap;">
+                <font class="vcenter-right" style="color:#999999;font-size:10px;font-weight:bold;height:20px;width:100%;">refer url</font>
+            </div>
+            
+            <div class="vcenter" style="">
+                <div onclick="copy()" class="vcenter btn_" style="height:18px;">
+                    <font style="color:#fff;font-size:12px;padding-right:10px;padding-left:10px">Copy</font>
+                </div>
+            </div>
+            
+        </div>
+    
+    
+    </div>
+    
+</div>
+<div class="vcenter" style="width:100%;margin-top:15px">
+    <div class="vcenter btn_" style="width:93%;height:80px;">
+
+       <div style="width:33%;height:100%">
+           <div class="vcenter" style="width:100%;margin-top:16px">
+               <font style="font-size:18px;color:#fff;margin-left:10px;font-weight:bold;font-family: 'Ebrima','Microsoft YaHei','黑体','宋体',sans-serif;">
+                    0               BDT</font>
+           </div>
+           <div class="vcenter" style="width:100%;;max-height:40%;text-align:center;line-height:15px">
+               <font style="font-size:14px;color:#fff;margin-left:10px">The total commission</font>
+           </div>
+           
+          
+       </div> 
+       <div style="width:34%;height:100%">
+           <div class="vcenter" style="width:100%;margin-top:16px">
+               <font style="font-size:18px;color:#fff;margin-left:10px;font-weight:bold;font-family: 'Ebrima','Microsoft YaHei','黑体','宋体',sans-serif;">
+                    0               BDT</font>
+           </div>
+           <div class="vcenter" style="width:100%;max-height:40%;text-align:center;line-height:15px">
+               <font style="font-size:14px;color:#fff;margin-left:10px">To return the commission</font>
+           </div>
+           
+          
+       </div> 
+       
+       <div style="width:33%;height:100%">
+            <div class="vcenter" style="width:100%;margin-top:16px">
+               <font style="font-size:18px;color:#fff;margin-left:10px;font-weight:bold;font-family: 'Ebrima','Microsoft YaHei','黑体','宋体',sans-serif;">0</font>
+           </div>
+           <div class="vcenter" style="width:100%;max-height:40%;text-align:center;line-height:15px">
+               <font style="font-size:14px;color:#fff;margin-left:10px">Team size</font>
+           </div>
+       </div> 
+    </div>
+</div>
+<div class="vcenter" style="width:100%;margin-top:15px">
+    <div  style="width:93%;height:296px;">
+        <div class="vcenter" style="width:100%;height:50px;">
+            <div class="vcenter-left" style="width:100%;height:100%;border-bottom:1px solid #cccccc;">
+                <div class="vcenter" style="width:15%;height:100%">
+                    <img src="assets/images/a_16.png" alt="" style="height:35px;" mode="heightFix" >
+                </div>
+                <div style="width:75%;height:100%">
+                    <div class="vcenter-bottom-left" style="width:100%;height:50%;">
+                        <font style="font-size:13px;color:#616a78;margin-left:10px">The subordinate list</font>
+                    </div>
+                    <div class="vcenter-top-left" style="width:100%;height:50%;">
+                        <font style="font-size:13px;color:#09bd96;margin-left:10px">0</font>
+                    </div>
+                    
+                    
+                </div>
+                <div class="vcenter-right" style="width:10%;height:100%">
+                    <img src="assets/images/xx_5.png" alt="" style="width:20px;height:20px;margin-right:10px">
+                </div>
+            </div>
+        </div>
+         <div class="vcenter" style="width:100%;height:50px;">
+            <div class="vcenter-left" style="width:100%;height:100%;border-bottom:1px solid #cccccc;">
+                <div class="vcenter" style="width:15%;height:100%">
+                    <img src="assets/images/a_17.png" alt="" style="height:35px;" mode="heightFix" >
+                </div>
+                <div style="width:75%;height:100%">
+                    <div class="vcenter-bottom-left" style="width:100%;height:50%;">
+                        <font style="font-size:13px;color:#616a78;margin-left:10px">New Register</font>
+                    </div>
+                    <div class="vcenter-top-left" style="width:100%;height:50%;">
+                        <font style="font-size:13px;color:#09bd96;margin-left:10px">0</font>
+                    </div>
+                    
+                    
+                </div>
+                <div class="vcenter-right" style="width:10%;height:100%">
+                    <img src="assets/images/xx_5.png" alt="" style="width:20px;height:20px;margin-right:10px">
+                </div>
+            </div>
+        </div>
+         <div class="vcenter" style="width:100%;min-height:50px;">
+            <div class="vcenter-left" style="width:100%;min-height:50px;border-bottom:1px solid #cccccc;">
+                <div class="vcenter" style="width:15%;height:100%">
+                    <img src="assets/images/a_18.png" alt="" style="height:30px;" mode="heightFix" >
+                </div>
+                <div style="width:75%;height:100%">
+                    <div class="vcenter-bottom-left" style="width:100%;height:50%;">
+                        <font style="font-size:13px;color:#616a78;margin-left:10px">Recharge Today（Amount/People）</font>
+                    </div>
+                    <div class="vcenter-top-left" style="width:100%;height:50%;">
+                        <font style="font-size:13px;color:#09bd96;margin-left:10px">0/0</font>
+                    </div>
+                    
+                    
+                </div>
+                <div class="vcenter-right" style="width:10%;height:100%">
+                    <img src="assets/images/xx_5.png" alt="" style="width:20px;height:20px;margin-right:10px">
+                </div>
+            </div>
+        </div>
+         <div class="vcenter" style="width:100%;min-height:50px;">
+            <div class="vcenter-left" style="width:100%;min-height:50px;border-bottom:1px solid #cccccc;">
+                <div class="vcenter" style="width:15%;height:100%">
+                    <img src="assets/a_19.png" alt="" style="height:26px;" mode="heightFix" >
+                </div>
+                <div style="width:75%;height:100%">
+                    <div class="vcenter-bottom-left" style="width:100%;height:50%;">
+                        <font style="font-size:13px;color:#616a78;margin-left:10px">Withdraw Today（Amount/People）</font>
+                    </div>
+                    <div class="vcenter-top-left" style="width:100%;height:50%;">
+                        <font style="font-size:13px;color:#09bd96;margin-left:10px">0/0</font>
+                    </div>
+                    
+                    
+                </div>
+                <div class="vcenter-right" style="width:10%;height:100%">
+                    <img src="assets/images/xx_5.png" alt="" style="width:20px;height:20px;margin-right:10px">
+                </div>
+            </div>
+        </div>
+         <div class="vcenter" style="width:100%;min-height:50px;">
+            <div class="vcenter-left" style="width:100%;min-height:50px;border-bottom:1px solid #cccccc;">
+                <div class="vcenter" style="width:15%;height:100%">
+                    <img src="assets/images/a_20.png" alt="" style="height:33px;" mode="heightFix" >
+                </div>
+                <div style="width:75%;height:100%">
+                    <div class="vcenter-bottom-left" style="width:100%;height:50%;">
+                        <font style="font-size:13px;color:#616a78;margin-left:10px">Total Transactions Today（Amount/People）</font>
+                    </div>
+                    <div class="vcenter-top-left" style="width:100%;height:50%;">
+                        <font style="font-size:13px;color:#09bd96;margin-left:10px">0/0</font>
+                    </div>
+                    
+                    
+                </div>
+                <div class="vcenter-right" style="width:10%;height:100%">
+                    <img src="assets/images/xx_5.png" alt="" style="width:20px;height:20px;margin-right:10px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- snav -->
+  <div class="snav">
+    <div class="mask"></div>
+    <div class="con">
+        <div class="snav-logo">
+            <img src="assets/images/logo400_lv_2.png" style="width:100px;height:auto"  alt="">
+
+        </div>
+        <div class="top">
+
+        </div>
+        
+        
+        <ul class="nav" id="daohanglkan">
+            <li>
+                <div class="vcenter-left" style="width:80%;height:40px;">
+                    <img src="assets/images/Vector_lv.png" width="15px" height="15px">
+        
+                    <select  id="chind" style="width:80px;height:20px;margin-left:17px;color:#6d81a4;border:0px;background:url('assets/images/rr_1_lv.png') right no-repeat;background-size:14px;font-size:14px;background-color:#fff;">
+                        <option>Language</option>
+                        <option value='en'>English</option>
+                        <option value="vi">Việt nam</option>
+                        <!--<option value="cntw">繁体中文</option>-->
+                        <option value="cn">简体中文</option>
+                        <option value='en'>বাংলা</option>
+                        <option value='en'>भारत</option>
+                        <option value='en'>ไทย</option>
+                        <option value='en'>日本</option>
+                        <option value='en'>Indonesia</option>
+                    </select>
+                </div>
+        
+
+
+            </li>
+ 
+            <li>
+                <a href="" class="v1">
+                    <i style="background-image: url(assets/images/c_n4.png)"></i>
+                    <span style="color:#6d81a4">Sports results</span>
+                </a>
+            </li>
+            <li>
+                <a href="" class="v1">
+                    <i style="background-image: url(assets/images/c_n1.png)"></i>
+                    <span style="color:#6d81a4">My team</span>
+                </a>
+            </li>
+            <li>
+                <a href="" class="v1">
+                    <i style="background-image: url(assets/images/c_n2.png)"></i>
+                    <span style="color:#6d81a4">MoneyLog</span>
+                </a>
+            </li>
+            <li>
+                <a href="" class="v1">
+                    <i style="background-image: url(assets/images/c_n5.png)"></i>
+                    <span style="color:#6d81a4">Accounting</span>
+                </a>
+            </li>
+            <li>
+                <a href="" class="v1">
+                    <i style="background-image: url(assets/images/c_n3.png)"></i>
+                    <span style="color:#6d81a4">Commission</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="v1">
+                    <i style="background-image: url(assets/images/c_n6.png)"></i>
+                    <span style="color:#6d81a4">Communique</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="v1">
+                    <i style="background-image: url(assets/images/c_n4.png)"></i>
+                    <span style="color:#6d81a4">Business license</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="loginOut()" class="v1">
+                    <i style="background-image: url(assets/images/c_n7.png)"></i>
+                    <span style="color:#6d81a4">Safety exit</span>
+                </a>
+            </li>
+            <li><a href="" class="v1">&nbsp;</a></li>
+            
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" charset="utf-8">
+
+    $('#chind').change(function(){
+        var data={'lang':$('#chind').val()}
+        $.get("/index/login/lang.html",data,function(){
+            location.reload();
+        })
+    })
+    var isPost=true;
+    function loginOut(){
+              if(isPost){
+                    isPost=false;
+                    $.post("/index/login/out.html",{},function(data){
+                       window.location.href=data.url;
+                    });
+                }
+    }
+</script>
+<!-- banner -->
+
+
+<!-- 内容 -->
+<div class="main">
+    
+    <div class="wp">
+
+
+
+    </div>
+</div>
+
+<div class="footer">
+    <div class="h55"></div>
+    <ul class="ul-tabbar">
+        <li class="on">
+            <a href="index.html">
+                <i class="i1"></i>
+                <span class="txt">Home</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="transaction.html">
+                <i class="i2"></i>
+                <span class="txt">Transaction</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="my-team.html">
+                <i class="i3"></i>
+                <span class="txt">My team</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="my.html">
+                <i class="i5"></i>
+                <span class="txt">My</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script>
+        layui.use('layer', function(){
+                var layer = layui.layer;
+            });
+            
+              function  copy(){
+                var url=$("#url").val();
+                let textareaEl = document.createElement('textarea'); 
+                textareaEl.value = url;  
+                document.body.appendChild(textareaEl);
+                textareaEl.select();   
+                document.execCommand('copy');  
+                document.body.removeChild(textareaEl);
+                 layer.msg('Copy success');
+            }
+</script>
+<script src="assets/js/jquery.countup.min.js"></script>
+<script src="assets/js//jquery.waypoints.min.js"></script>
+<script src="assets/js//lib.js "></script>
+<script src="assets/js//query.js"></script>
+<script src="assets/js/chinese.js"></script>   
+</body>
+
+</html>

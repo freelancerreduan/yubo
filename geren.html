@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Personal data</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/query.js"></script>
+    <script src="assets/js/lib.js"></script>
+                	            <style>
+        	    .vcenter{
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+.vcenter-left{
+  display:flex;
+  align-items:center;
+  justify-content:left
+}
+.vcenter-right{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end
+}
+.vcenter-bottom{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+.vcenter-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+}
+.vcenter-top-left{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+.vcenter-top-right{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-end;
+}
+.vcenter-bottom-left{
+    display:flex;
+  align-items:flex-end;
+  justify-content:left;
+}
+.vcenter-bottom-right{
+    display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+}
+.btn{
+    background:linear-gradient(90deg, #07B8A4 1.38%, #0EC77B 100%);box-shadow: 0px 6px 8px rgba(7,184,164,0.14);border-radius:8px;
+}
+</style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>会员中心</title>
+
+
+
+
+
+
+    <script type="text/javascript" src="/static/home/js/jquery.js"></script>
+
+    <script type="text/javascript" src="/static/home/js/Layer/layer.js"></script>
+
+
+</head>
+<!--头部结束-->
+<body class=""  style="background-color:#fff;padding-top:0px">
+<!-- 头部 -->
+<div class="vcenter" style="width:100%;margin-top:10px;">
+        <div class="vcenter-right"  onclick="javascript:window.location.href='https://lp.gkkvip.cc/yubo/';" style="width:120px;height:45px;position:absolute;right:0px">
+            <font class="btn" style="margin-right:10px;color:#eeeeee;font-size:13px;padding-left:5px;padding-right:5px;height:30px;border-radius:5px;padding-top:4px">Online Service</font>
+        </div>
+        <div onclick="javascript:window.location.href='my.html';" class="vcenter" style="width:80%;height:25px;">
+            <img src="assets/images/rr_3_lv.png" width="25px" height="25px" style="position:absolute;left:10px">
+             <p style="font-size:20px;background: linear-gradient(90deg, #07B8A4 1.38%, #0EC77B 100%);background-clip: text;color: transparent;-webkit-background-clip: text;font-weight:bold;transform: scale(.9)">Personal data</p> 
+        </div>
+</div>
+<!-- 头部 -->
+<div  class="vcenter" style="width:100%;margin-top:20px">
+    <div  style="width:90%;height:243px;background:linear-gradient(180deg,rgba(7,184,164,0.1)0%,rgba(7,184,164,0)100%);border-top:1px solid rgba(7,184,164,0.18);border-radius:10px;">
+        <div class="vcenter" style="width:100%;">
+            <div class="vcenter" style="width:90%;height:43px;border-bottom:1px solid #cccccc;margin-top:15px">
+              <div class="vcenter-left" style="width:25%;height:100%;">
+                    <font style="color:#7c859e;font-size:12px">Account:</font> 
+              </div>
+              <div class="vcenter-right" style="width:75%;height:100%;">
+                    <font style="color:#5a6686;font-size:12px">115713</font> 
+              </div>
+            </div>
+        </div>
+        <div class="vcenter" style="width:100%;">
+            <div class="vcenter" style="width:90%;height:43px;border-bottom:1px solid #cccccc;">
+              <div class="vcenter-left" style="width:25%;height:100%;">
+                    <font style="color:#7c859e;font-size:12px">Balance:</font> 
+              </div>
+              <div class="vcenter-right" style="width:75%;height:100%;">
+                    <font style="color:#5a6686;font-size:12px">
+                    11 BDT                    </font> 
+              </div>
+            </div>
+        </div>
+        <div  onClick="findPwd()" class="vcenter" style="width:100%;">
+            <div class="vcenter" style="width:90%;height:43px;border-bottom:1px solid #cccccc;">
+              <div class="vcenter-left" style="width:25%;height:100%;">
+                    <font style="color:#7c859e;font-size:12px">Password:</font> 
+              </div>
+              <div class="vcenter-right" style="width:75%;height:100%;">
+                    <font style="color:#5a6686;font-size:12px">Update<i style="display:inline-block;vertical-align:-2px;margin-right:2px;margin-left:3px;width:14px;height:14px;background:url('/static/tg60/images/xx_11_lv.png') center no-repeat;-webkit-background-size:contain;background-size:contain;"></i></font> 
+              </div>
+            </div>
+        </div>
+        <div  onClick="findPwd2()" class="vcenter" style="width:100%;">
+            <div class="vcenter" style="width:90%;height:43px;border-bottom:1px solid #cccccc;">
+              <div class="vcenter-left" style="width:25%;height:100%;">
+                    <font style="color:#7c859e;font-size:12px">Trade password:</font> 
+              </div>
+              <div class="vcenter-right" style="width:75%;height:100%;">
+                    <font style="color:#5a6686;font-size:12px">Update<i style="display:inline-block;vertical-align:-2px;margin-right:2px;margin-left:3px;width:14px;height:14px;background:url('/static/tg60/images/xx_11_lv.png') center no-repeat;-webkit-background-size:contain;background-size:contain;"></i></font> 
+              </div>
+            </div>
+        </div>
+        <div onClick="editBank()" class="vcenter" style="width:100%;">
+            <div class="vcenter" style="width:90%;height:43px;">
+              <div class="vcenter-left" style="width:25%;height:100%;">
+                    <font style="color:#7c859e;font-size:12px">Bank receipt information:</font> 
+              </div>
+              <div class="vcenter-right" style="width:75%;height:100%;">
+                    <font style="color:#5a6686;font-size:12px">Update<i style="display:inline-block;vertical-align:-2px;margin-right:2px;margin-left:3px;width:14px;height:14px;background:url('/static/tg60/images/xx_11_lv.png') center no-repeat;-webkit-background-size:contain;background-size:contain;"></i></font> 
+              </div>
+            </div>
+        </div>
+        
+        <div onClick="edituBank()" class="vcenter" style="width:100%;">
+            <div class="vcenter" style="width:90%;height:43px;">
+              <div class="vcenter-left" style="width:65%;height:100%;">
+                    <font style="color:#7c859e;font-size:12px">Virtual currency account:</font> 
+              </div>
+              <div class="vcenter-right" style="width:35%;height:100%;">
+                    <font style="color:#5a6686;font-size:12px">Update<i style="display:inline-block;vertical-align:-2px;margin-right:2px;margin-left:3px;width:14px;height:14px;background:url('/static/tg60/images/xx_11_lv.png') center no-repeat;-webkit-background-size:contain;background-size:contain;"></i></font> 
+              </div>
+            </div>
+        </div>
+        
+    </div>
+        
+</div>
+
+<div  class="vcenter" style="width:100%;margin-top:40px">
+    <div  style="width:90%;height:170px;background:linear-gradient(180deg,rgba(7,184,164,0.1)0%,rgba(7,184,164,0)100%);border-top:1px solid rgba(7,184,164,0.18);border-radius:10px;">
+        <div class="vcenter" style="width:100%;">
+            <div class="vcenter" style="width:90%;height:43px;border-bottom:1px solid #cccccc;margin-top:15px">
+              <div class="vcenter-left" style="width:25%;height:100%;">
+                    <font style="color:#7c859e;font-size:12px">Payment methods:</font> 
+              </div>
+              <div class="vcenter-right" style="width:75%;height:100%;">
+                    <font style="color:#5a6686;font-size:12px">bkash</font> 
+              </div>
+            </div>
+        </div>
+        <div class="vcenter" style="width:100%;">
+            <div class="vcenter" style="width:90%;height:43px;border-bottom:1px solid #cccccc;">
+              <div class="vcenter-left" style="width:25%;height:100%;">
+                    <font style="color:#7c859e;font-size:12px">Collection name:</font> 
+              </div>
+              <div class="vcenter-right" style="width:75%;height:100%;">
+                    <font style="color:#5a6686;font-size:12px"></font> 
+              </div>
+            </div>
+        </div>
+        <div class="vcenter" style="width:100%;">
+            <div class="vcenter" style="width:90%;height:43px;border-bottom:1px solid #cccccc;">
+              <div class="vcenter-left" style="width:25%;height:100%;">
+                    <font style="color:#7c859e;font-size:12px">Payment account:</font> 
+              </div>
+              <div class="vcenter-right" style="width:75%;height:100%;">
+                    <font style="color:#5a6686;font-size:12px"> </font> 
+              </div>
+            </div>
+        </div>
+        <div class="vcenter" style="width:100%;display:none">
+            <div class="vcenter" style="width:90%;height:43px;">
+              <div class="vcenter-left" style="width:25%;height:100%;">
+                    <font style="color:#7c859e;font-size:12px">Phone number:</font> 
+              </div>
+              <div class="vcenter-right" style="width:75%;height:100%;">
+                    <font style="color:#5a6686;font-size:12px"></font> 
+              </div>
+            </div>
+        </div>
+        
+    </div>
+        
+</div>
+
+<div  class="vcenter" style="width:100%;margin-top:40px">
+    <div  style="width:90%;height:170px;background:linear-gradient(180deg,rgba(55,143,249,0.1)0%,rgba(55,143,249,0)100%);border-top:1px solid rgba(55,143,249,0.18);border-radius:10px;">
+        <div class="vcenter" style="width:100%;">
+            <div class="vcenter" style="width:90%;height:43px;border-bottom:1px solid #cccccc;margin-top:15px">
+              <div class="vcenter-left" style="width:40%;height:100%;">
+                    <font style="color:#7c859e;font-size:12px">Virtual currency network:</font> 
+              </div>
+              <div class="vcenter-right" style="width:60%;height:100%;">
+                    <font style="color:#5a6686;font-size:12px">TRC20</font> 
+              </div>
+            </div>
+        </div>
+        <div class="vcenter" style="width:100%;">
+            <div class="vcenter" style="width:90%;height:43px;border-bottom:1px solid #cccccc;">
+              <div class="vcenter-left" style="width:40%;height:100%;">
+                    <font style="color:#7c859e;font-size:12px">Address to receive USDT:</font> 
+              </div>
+              <div class="vcenter-right" style="width:60%;height:100%;overflow: scroll;">
+                    <font style="color:#5a6686;font-size:12px"> </font> 
+              </div>
+            </div>
+        </div>
+    </div>
+        
+</div>
+
+
+
+<div class="footer">
+    <div class="h55"></div>
+    <ul class="ul-tabbar">
+        <li class="on">
+            <a href="index.html">
+                <i class="i1"></i>
+                <span class="txt">Home</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="transaction.html">
+                <i class="i2"></i>
+                <span class="txt">Transaction</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="my-team.html">
+                <i class="i3"></i>
+                <span class="txt">My team</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="my.html">
+                <i class="i5"></i>
+                <span class="txt">My</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script>
+    function editBank(){
+        layer.open({
+            type: 2,
+            title: "Change the Gathering information",
+            shadeClose: true,
+            shade: 0.5,
+            area: ['90%', '350px'],
+            content: "/index/user/bank.html",
+            end: function () {
+                location.reload();
+            }
+        });
+    }
+    function edituBank(){
+        layer.open({
+            type: 2,
+            title: "Change the Gathering information",
+            shadeClose: true,
+            shade: 0.5,
+            area: ['90%', '200px'],
+            content: "/index/user/ubank.html",
+            end: function () {
+                location.reload();
+            }
+        });
+    }
+    function findPwd2(){
+        layer.open({
+            type: 2,
+            title: "Change the transaction password",
+            shadeClose: true,
+            shade: 0.5,
+            area: ['90%', '250px'],
+            content: "/index/user/bypass.html",
+            end: function () {
+                location.reload();
+            }
+        });
+    }
+    function findPwd(){
+        layer.open({
+            type: 2,
+            title: "Change the Login Password",
+            shadeClose: true,
+            shade: 0.5,
+            area: ['90%', '250px'],
+            content: "/index/user/pass.html",
+            end: function () {
+                location.reload();
+            }
+        });
+    }
+    
+    // JavaScript Document
+    function DJS(id){
+        var yuan=$('#'+id).text()
+        var count = 60;
+        CountDown();
+        var countdown = setInterval(CountDown, 1000);
+        function CountDown() {
+            $("#"+id).attr("disabled", true);
+            $("#"+id).text("Wait..." + count +"s");
+            if (count == 0) {
+                $("#"+id).text(yuan);
+                $("#"+id).removeAttr("disabled");
+                clearInterval(countdown);
+            }
+            count--;
+        }
+    }
+</script>
+</body>
+
+</html>

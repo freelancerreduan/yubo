@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>My team</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/query.js"></script>
+    <script src="assets/js/lib.js"></script>
+    <style>
+    .vcenter{
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+.vcenter-left{
+  display:flex;
+  align-items:center;
+  justify-content:left
+}
+.vcenter-right{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end
+}
+.vcenter-bottom{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+.vcenter-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+}
+.vcenter-top-left{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+.vcenter-top-right{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-end;
+}
+.vcenter-bottom-left{
+    display:flex;
+  align-items:flex-end;
+  justify-content:left;
+}
+.vcenter-bottom-right{
+    display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+}
+.btn{
+    background:linear-gradient(90deg, #07B8A4 1.38%, #0EC77B 100%);box-shadow: 0px 6px 8px rgba(7,184,164,0.14);border-radius:8px;
+}
+
+    </style>
+    <script>
+    var cIndex=1;
+    function setDiv(id){
+        $("#div_1").css("display","none");
+        $("#div_2").css("display","none");
+        $("#div_3").css("display","none");
+        $("#div_"+id).css("display","flex");
+    }
+    function np(p){
+        window.location.href="/index/user/tjinfo3.html?page="+p;
+    }
+    function setDiv(index){
+        $("#td1").css("border-bottom","1px solid #cccccc");
+        $("#td2").css("border-bottom","1px solid #cccccc");
+        $("#td3").css("border-bottom","1px solid #cccccc");
+        
+        $("#tdf1").css("color","#333333");
+        $("#tdf2").css("color","#333333");
+        $("#tdf3").css("color","#333333");
+        
+        $("#div_1").css("display","none");
+        $("#div_2").css("display","none");
+        $("#div_3").css("display","none");
+        
+        
+        $("#div_"+index).css("display","flex");
+        $("#tdf"+index).css("color","#07B8A4");
+        $("#td"+index).css("border-bottom","1px solid #07B8A4");
+        cIndex=index;
+    }
+    $(document).ready(function () {
+           var t=$("#lv_").val();
+           if(t)
+           $("#lvSelect").val(t);
+        }); 
+</script>
+</head>
+
+<body class="index"  style="background-color:#fff;padding-top:0px">
+<!-- 头部 --> 
+<div class="vcenter" style="width:100%;margin-top:10px;">
+        <div class="vcenter-right"  onclick="javascript:window.location.href='https://lp.gkkvip.cc/yubo/';" style="width:120px;height:45px;position:absolute;right:0px">
+            <font class="btn" style="margin-right:10px;color:#eeeeee;font-size:13px;padding-left:5px;padding-right:5px;height:30px;border-radius:5px;padding-top:4px">Online Service</font>
+        </div>
+        <div onclick="javascript:window.location.href='my.html';" class="vcenter" style="width:80%;height:25px;">
+            <img src="assets/images/rr_3_lv.png" width="25px" height="25px" style="position:absolute;left:10px">
+             <p style="font-size:20px;background: linear-gradient(90deg, #07B8A4 1.38%, #0EC77B 100%);background-clip: text;color: transparent;-webkit-background-clip: text;font-weight:bold;transform: scale(.9)">About us</p> 
+        </div>
+</div>
+<div class="vcenter" style="width:100%;margin-top:20px">
+    <div class="vcenter"  style="width:90%;">
+        <img src="assets/images/org.jpg" style="width:100%;height:auto;border-radius:5px">
+    </div> 
+</div>
+<!-- 底部 -->
+<script>
+      $('#lvSelect').change(function(){
+        
+        window.location.href='/index/user/tjinfo3.html'+'?lv='+$('#lvSelect').val();
+
+    })
+</script>
+</body>
+
+</html>

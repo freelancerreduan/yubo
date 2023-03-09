@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Home</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- slik slider -->
+    <!-- ai link gola head tege a pest korte hoi -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">   
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> 
+    <style>
+        .vcenter {
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .vcenter-left {
+            display: flex;
+            align-items: center;
+            justify-content: left
+        }
+
+        .vcenter-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end
+        }
+
+        .vcenter-bottom {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .vcenter-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .vcenter-top-left {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .vcenter-top-right {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+
+        .vcenter-bottom-left {
+            display: flex;
+            align-items: flex-end;
+            justify-content: left;
+        }
+
+        .vcenter-bottom-right {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        .my-modal-wrap {
+            position: fixed;
+            overflow: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            z-index: 999;
+            -webkit-overflow-scrolling: touch;
+            outline: 0;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        .my-modal-content {
+            background-color: initial;
+            overflow: auto;
+            position: relative;
+            border: 0;
+            background-clip: padding-box;
+            text-align: center;
+            height: 100%;
+        }
+
+        .my-modal-body {
+            font-size: .3rem;
+            color: #6c7ba8;
+            height: 100%;
+            line-height: 1.5;
+            overflow: auto;
+        }
+
+        .TimeLimitedModal_container__3Awlm {
+            border-radius: 24px;
+            width: 310px;
+            height: 410px;
+            background-color: #07B8A4;
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at {
+            height: calc(100% - 42px);
+            display: -webkit-flex;
+            display: flex;
+            -webkit-justify-content: flex-end;
+            justify-content: flex-end;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            padding-bottom: 24px;
+            background-color: #f1f4f8;
+            border-radius: 0 0 24px 24px;
+        }
+
+        .TimeLimitedModal_modal__3Mp-L .TimeLimitedModal_container__3Awlm .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_tabs__3xlLr {
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        .TimeLimitedModal_inner__uxOPj {
+            position: relative;
+            height: 100%;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+            /* background: url(/_next/static/chunks/images/bg_poptabsel_letf-6d70043….png) no-repeat 0 0/6.2rem 1.32rem,url(/_next/static/chunks/images/bg_poptabsel_middle-b2397ad….png) no-repeat 0 1.3rem/6.2rem 8.56rem; */
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_tabs__3xlLr .TimeLimitedModal_tabItem__9TkFH {
+            -webkit-flex: 1 1;
+            flex: 1 1;
+            text-align: center;
+            line-height: 42px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: PingFang SC;
+            color: #fff;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE {
+            height: 100%;
+            padding: 24px 24px 0;
+            box-sizing: border-box;
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX {
+            height: calc(100% - 60px);
+            overflow-y: scroll;
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX .TimeLimitedModal_list__1Q8Md .TimeLimitedModal_item__1tef9 {
+            text-align: left;
+            color: #6c7ba8;
+            font-family: PingFang SC;
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX .TimeLimitedModal_list__1Q8Md .TimeLimitedModal_item__1tef9 .TimeLimitedModal_title__LXjmZ {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 40px;
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX .TimeLimitedModal_list__1Q8Md .TimeLimitedModal_item__1tef9 .TimeLimitedModal_content__2CjhE {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_btn__4qjsT {
+            line-height: 40px;
+            height: 40px;
+            width: 262px;
+            text-align: center;
+            font-family: PingFang SC;
+            font-weight: 500;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 20px;
+            margin: 20px auto 0;
+            background: -webkit-linear-gradient(top, #97ccff, #07B8A4);
+            background: linear-gradient(180deg, #97ccff, #07B8A4);
+            box-shadow: 0 2px 4px rgba(93, 167, 235, .8);
+        }
+
+        .TimeLimitedModal_checkWrapper__3mR_c {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            padding-top: .4rem;
+        }
+
+        .TimeLimitedModal_checkWrapper__3mR_c i {
+            width: 14px;
+            height: 14px;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIVBMVEVMaXH///////////////////////////////////////8c1D1MAAAACnRSTlMAIEBBj5Cvvu7vLtBcNAAAAElJREFUeNpjYKxcBQfLBBgkVyGBRoasVUhgOcOqpUpwELWCYdUiBjiwWjXKxcedtcQYBJRAwGsVQ9UqJLCMQQI12BmzVsHBdAEA0SlmDw9W4MoAAAAASUVORK5CYII=);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .TimeLimitedModal_checkWrapper__3mR_c i.TimeLimitedModal_checked__3t0yr {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP1BMVEVMaXE/d/dAdflAdPlBdflBdvn////+///z9/7J2P64zP23zP2sw/2gu/2UsvyIqfx8oPxlkPpkkPpYh/tBdvo7SxPoAAAABnRSTlMAIK++7/72TMLkAAAAhElEQVR42qXSQRKCMAxA0aQtAVSwQu5/Vh1l+kewXcjftS+7RERjcqKgIgrtSirBq0XxeqmF3R+4NnCyK3gwsxk8WJ9/491eTQ4ueW/gMmxPDBzLR94MZPwxYG9Ei4HoDftCn+3TBQN9MgwsioFoPzZWtp5eNphaGOsY2kctGjpyKKo8Aep5NLNjZ5vuAAAAAElFTkSuQmCC);
+        }
+
+        .TimeLimitedModal_checkWrapper__3mR_c span {
+            margin-left: 8px;
+            font-family: PingFang SC;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="index" style="background-color:#fff;padding-top:0px">
+
+    <div class="header" style="background-color:#fff">
+        <div class="vcenter-left" class="wp" style="background-color:#fff;height:40px">
+            <div class="vcenter-left" style="width:50%;height:100%">
+                <font style="margin-left:20px;color:#07B8A4;font-size:18px;font-weight:bold;margin-top:7px">Home</font>
+            </div>
+            <div class="vcenter-right" style="width:50%;height:100%">
+                <span class="menuBtn"
+                    style="position:absolute;top:0;right:0;left:90%;width:20px;height:45px;background:url(assets/images/cc_btn_lv.png) center right no-repeat;background-size:auto 20px;margin-right:10px"> </span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- 头部 -->
+    <!-- 引入共用左边导航栏 -->
+
+    <!--左边列表-->
+
+    <script src="assets/chinese.js"></script>
+    <style>
+        @media screen and (max-width: 680px) {
+
+            #daohanglkan {
+                overflow: auto;
+                height: 474PX;
+
+            }
+        }
+    </style>
+    <!-- snav -->
+    <div class="snav">
+        <div class="mask"></div>
+        <div class="con">
+            <div class="snav-logo">
+                <img src="assets/images/logo400_lv_2.png" style="width:100px;height:auto" alt="">
+
+            </div>
+            <div class="top">
+
+            </div>
+
+
+            <ul class="nav" id="daohanglkan">
+                <li>
+                    <div class="vcenter-left" style="width:80%;height:40px;">
+                        <img src="assets/images/Vector_lv.png" width="15px" height="15px">
+
+                        <select id="chind"
+                            style="width:80px;height:20px;margin-left:17px;color:#6d81a4;border:0px;background:url('assets/images/rr_1_lv.png') right no-repeat;background-size:14px;font-size:14px;background-color:#fff;">
+                            <option>Language</option>
+                            <option value='en'>English</option>
+                            <option value="vi">Việt nam</option>
+                            <!--<option value="cntw">繁体中文</option>-->
+                            <option value="cn">简体中文</option>
+                            <option value='en'>বাংলা</option>
+                            <option value='en'>भारत</option>
+                            <option value='en'>ไทย</option>
+                            <option value='en'>日本</option>
+                            <option value='en'>Indonesia</option>
+                        </select>
+                    </div>
+
+
+
+                </li>
+
+                <li>
+                    <a href="/index/saishi/jieguo.html" class="v1">
+                        <i style="background-image: url(assets/images/c_n4.png)"></i>
+                        <span style="color:#6d81a4">Sports results</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index/user/tuijian.html" class="v1">
+                        <i style="background-image: url(assets/images/c_n1.png)"></i>
+                        <span style="color:#6d81a4">My team</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index/user/account2.html" class="v1">
+                        <i style="background-image: url(assets/images/c_n2.png)"></i>
+                        <span style="color:#6d81a4">MoneyLog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index/user/xiazhutongji.html" class="v1">
+                        <i style="background-image: url(assets/images/c_n5.png)"></i>
+                        <span style="color:#6d81a4">Accounting</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index/user/fanyong.html" class="v1">
+                        <i style="background-image: url(assets/images/c_n3.png)"></i>
+                        <span style="color:#6d81a4">Commission</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/index/news/index.html" class="v1">
+                        <i style="background-image: url(assets/images/c_n6.png)"></i>
+                        <span style="color:#6d81a4">Communique</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index/user/certificate.html" class="v1">
+                        <i style="background-image: url(assets/images/c_n4.png)"></i>
+                        <span style="color:#6d81a4">Business license</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="loginOut()" class="v1">
+                        <i style="background-image: url(assets/images/c_n7.png)"></i>
+                        <span style="color:#6d81a4">Safety exit</span>
+                    </a>
+                </li>
+                <li><a href="" class="v1">&nbsp;</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+        //语言
+        $('#chind').change(function () {
+            var data = { 'lang': $('#chind').val() }
+            $.get("/index/login/lang.html", data, function () {
+                location.reload();
+            })
+        })
+        var isPost = true;
+        function loginOut() {
+            if (isPost) {
+                isPost = false;
+                $.post("/index/login/out.html", {}, function (data) {
+                    window.location.href = data.url;
+                });
+            }
+        }
+    </script>
+    <!-- banner -->
+
+
+
+<!-- Slider Section hear -->
+<div class="vcenter" style="width:100%;background-color:#fff;height:200px">
+    <div class="banner" style="margin-top:50px;width:90%;">
+        <img src="assets/images/1.png" alt="" class="item" width="100%">
+    </div>
+</div>
+
+
+        <div class="vcenter" style="width:100%;background-color:#fff;margin-top:10px">
+            <div class="vcenter-left" style="width:90%;">
+                <img src="assets/images/aa_new_lv.png" alt="" style="width:30px;height:30px">
+                <!-- 滚动公告 -->
+                <div class="notice" style="color:#3a5277">
+                    <marquee>
+                        Dear player: If you have never withdrawn, please use the same bkash or nagad as your Yubo
+                        account to withdraw, so that you can withdraw quickly and successfully. For the security of your
+                        account, please keep in mind your login password and withdrawal password at all times. If the
+                        password is disclosed, the consequences shall be borne by you. </marquee>
+                </div>
+            </div>
+        </div>
+        <div class="vcenter" style="width:100%;height:100px;">
+            <div class="vcenter" style="width:100%;height:100px;">
+                <div onclick="javascript:window.location.href='/index/user/virtual_pay.html';" class="vcenter"
+                    style="width:25%;height:100%;">
+                    <div style="width:100%;height:100%">
+                        <div class="vcenter-bottom" style="width:100%;height:60px;">
+                            <img src="assets/images/new_100_lv.png" alt="" style="width:50px;height:50px">
+                        </div>
+                        <div class="vcenter-top" style="width:100%;height:40px;">
+                            <font style="color:#3a5277;font-size:14px">Recharge</font>
+                        </div>
+                    </div>
+                </div>
+                <div onclick="javascript:window.location.href='/index/user/tixian.html';" class="vcenter"
+                    style="width:25%;height:100%;">
+                    <div style="width:100%;height:100%">
+                        <div class="vcenter-bottom" style="width:100%;height:60px;">
+                            <img src="assets/images/ww_22_lv.png" alt="" style="width:50px;height:50px">
+                        </div>
+                        <div class="vcenter-top" style="width:100%;height:40px;">
+                            <font style="color:#3a5277;font-size:14px">Withdraw</font>
+                        </div>
+                    </div>
+                </div>
+                <div onclick="javascript:window.location.href='https://lp.gkkvip.cc/yubo/';" class="vcenter"
+                    style="width:25%;height:100%;">
+                    <div style="width:100%;height:100%">
+                        <div class="vcenter-bottom" style="width:100%;height:60px;">
+                            <img src="assets/images/ww_23_lv.png" alt="" style="width:50px;height:50px">
+                        </div>
+                        <div class="vcenter-top" style="width:100%;height:40px;">
+                            <font style="color:#3a5277;font-size:14px">Service</font>
+                        </div>
+                    </div>
+                </div>
+                <div onclick="javascript:window.location.href='/index/user/downapp.html';" class="vcenter"
+                    style="width:25%;height:100%;">
+                    <div style="width:100%;height:100%">
+                        <div class="vcenter-bottom" style="width:100%;height:60px;">
+                            <img src="assets/images/new__2_lv.png" alt="" style="width:50px;height:50px">
+                        </div>
+                        <div class="vcenter-top" style="width:100%;height:40px;">
+                            <font style="color:#3a5277;font-size:14px">Download</font>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vcenter" style="width:100%;margin-bottom:20px">
+            <div onclick="toSaishi(2)" class="vcenter" style="width:50%;">
+                <div class="vcenter-right"
+                    style="width:162px;height:60px;background:url(assets/images/xxx1_new_.png) no-repeat; background-size:100% 100%">
+                    <div class="vcenter-right" style="width:56%;height:50%;text-align:right">
+                        <font style="color:#ffa700;font-size:14px;margin-right:10px;font-weight:bold">Inverse score
+                        </font>
+                    </div>
+
+                </div>
+
+            </div>
+            <div onclick="toSaishi(1)" class="vcenter" style="width:50%;">
+                <div class="vcenter-left"
+                    style="width:162px;height:60px;background:url(assets/images/xxx2_new_.png) no-repeat; background-size:100% 100%">
+                    <div class="vcenter" style="width:60%;height:50%;">
+                        <font style="color:#1e7dff;font-size:14px;margin-left:10px;font-weight:bold">Positive score
+                        </font>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wp">
+
+
+            <div>
+                <div>
+                    <ul>
+
+                        <li style="margin-bottom:15px">
+                            <a href="#">
+                                <div
+                                    style="width:100%;height:119px;background:linear-gradient(180deg,rgba(7,184,164,0.1)100%,rgba(7,184,164,0) 100%);border-radius:10px;">
+                                    <div style="width:27px; height:26px; position:absolute;">
+                                        <img src="assets/images/a_15.png" alt="" style="width:27px;height:26px">
+                                    </div>
+                                    <div
+                                        style="width:100%;height:55px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-right" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_3.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="width:40%;height:100%;">
+                                            <div style="width:100%;height:30px;margin-top:23px">
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">Volume</font>
+                                                </div>
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">134335.52k
+                                                    </font>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="vcenter" style="width:100%;height:30px;">
+                                                <img src="assets/images/vs_lv.png" alt=""
+                                                    style="width:30px;height:20px;margin-top:25px">
+                                            </div>
+
+                                        </div>
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-left" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_2.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:20px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:100%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;margin-left:5px">CHINA U20
+                                                </font>
+                                            </div>
+
+                                        </div>
+                                        <div
+                                            style="width:16%;height:100%;display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:98%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;"> SAUDI ARABIA U20</font>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:39px;display:flex;align-items:flex-start;justify-content:flex-start">
+                                        <div
+                                            style="width:33%;height:100%;  display:flex;align-items:center;justify-content:left;">
+                                            <img src="assets/images/uu_1.png" alt=""
+                                                style="margin-left:10px;width:16px;height:16px;">
+                                            <font style="margin-left:5px;font-size:12px;color:#777777;">03-06 18:00
+                                            </font>
+                                        </div>
+                                        <div
+                                            style="width:34%;height:100%;  display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div
+                                            style="width:30%;height:100%;text-align:right;overflow:hidden;white-space:nowrap;line-height:39px">
+                                            <font
+                                                style="width:100%;font-size:12px;color:#777777;transform: scale(.8);margin-right:10px">
+                                                AFC U20 Asian Cup</font>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </li>
+
+                        <li style="margin-bottom:15px">
+                            <a href="#">
+                                <div
+                                    style="width:100%;height:119px;background:linear-gradient(180deg,rgba(7,184,164,0.1)100%,rgba(7,184,164,0) 100%);border-radius:10px;">
+                                    <div style="width:27px;height26px;position:absolute;">
+                                        <img src="assets/images/a_15.png" alt="" style="width:27px;height:26px">
+                                    </div>
+                                    <div
+                                        style="width:100%;height:55px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-right" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_3.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="width:40%;height:100%;">
+                                            <div style="width:100%;height:30px;margin-top:23px">
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">Volume</font>
+                                                </div>
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">57993.14k
+                                                    </font>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="vcenter" style="width:100%;height:30px;">
+                                                <img src="assets/images/vs_lv.png" alt=""
+                                                    style="width:30px;height:20px;margin-top:25px">
+                                            </div>
+
+                                        </div>
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-left" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_2.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:20px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:100%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;margin-left:5px">NOVI PAZAR
+                                                </font>
+                                            </div>
+
+                                        </div>
+                                        <div
+                                            style="width:16%;height:100%;display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:98%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;"> RADNICKI 1923 KRAGUJEVAC
+                                                </font>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:39px;display:flex;align-items:flex-start;justify-content:flex-start">
+                                        <div
+                                            style="width:33%;height:100%;  display:flex;align-items:center;justify-content:left;">
+                                            <img src="assets/images/uu_1.png" alt=""
+                                                style="margin-left:10px;width:16px;height:16px;">
+                                            <font style="margin-left:5px;font-size:12px;color:#777777;">03-06 19:00
+                                            </font>
+                                        </div>
+                                        <div
+                                            style="width:34%;height:100%;  display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div
+                                            style="width:30%;height:100%;text-align:right;overflow:hidden;white-space:nowrap;line-height:39px">
+                                            <font
+                                                style="width:100%;font-size:12px;color:#777777;transform: scale(.8);margin-right:10px">
+                                                SER Super liga</font>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </li>
+
+                        <li style="margin-bottom:15px">
+                            <a href="#">
+                                <div
+                                    style="width:100%;height:119px;background:linear-gradient(180deg,rgba(7,184,164,0.1)100%,rgba(7,184,164,0) 100%);border-radius:10px;">
+                                    <div style="width:27px;height26px;position:absolute;">
+                                        <img src="assets/images/a_15.png" alt="" style="width:27px;height:26px">
+                                    </div>
+                                    <div
+                                        style="width:100%;height:55px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-right" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_3.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="width:40%;height:100%;">
+                                            <div style="width:100%;height:30px;margin-top:23px">
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">Volume</font>
+                                                </div>
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">5683.41k
+                                                    </font>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="vcenter" style="width:100%;height:30px;">
+                                                <img src="assets/images/vs_lv.png" alt=""
+                                                    style="width:30px;height:20px;margin-top:25px">
+                                            </div>
+
+                                        </div>
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-left" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_2.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:20px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:100%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;margin-left:5px">ESTEGHLAL
+                                                    TEHRAN </font>
+                                            </div>
+
+                                        </div>
+                                        <div
+                                            style="width:16%;height:100%;display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:98%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;"> GOL GOHAR FC</font>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:39px;display:flex;align-items:flex-start;justify-content:flex-start">
+                                        <div
+                                            style="width:33%;height:100%;  display:flex;align-items:center;justify-content:left;">
+                                            <img src="assets/images/uu_1.png" alt=""
+                                                style="margin-left:10px;width:16px;height:16px;">
+                                            <font style="margin-left:5px;font-size:12px;color:#777777;">03-06 19:15
+                                            </font>
+                                        </div>
+                                        <div
+                                            style="width:34%;height:100%;  display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div
+                                            style="width:30%;height:100%;text-align:right;overflow:hidden;white-space:nowrap;line-height:39px">
+                                            <font
+                                                style="width:100%;font-size:12px;color:#777777;transform: scale(.8);margin-right:10px">
+                                                IRN Pro League</font>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </li>
+
+                        <li style="margin-bottom:15px">
+                            <a href="">
+                                <div
+                                    style="width:100%;height:119px;background:linear-gradient(180deg,rgba(7,184,164,0.1)100%,rgba(7,184,164,0) 100%);border-radius:10px;">
+                                    <div style="width:27px;height26px;position:absolute;">
+                                        <img src="assets/images/a_15.png" alt="" style="width:27px;height:26px">
+                                    </div>
+                                    <div
+                                        style="width:100%;height:55px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-right" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_3.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="width:40%;height:100%;">
+                                            <div style="width:100%;height:30px;margin-top:23px">
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">Volume</font>
+                                                </div>
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">568051.37k
+                                                    </font>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="vcenter" style="width:100%;height:30px;">
+                                                <img src="assets/images/vs_lv.png" alt=""
+                                                    style="width:30px;height:20px;margin-top:25px">
+                                            </div>
+
+                                        </div>
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-left" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_2.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:20px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:100%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;margin-left:5px">EMPOLI U20
+                                                </font>
+                                            </div>
+
+                                        </div>
+                                        <div
+                                            style="width:16%;height:100%;display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:98%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;"> UDINESE U20</font>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:39px;display:flex;align-items:flex-start;justify-content:flex-start">
+                                        <div
+                                            style="width:33%;height:100%;  display:flex;align-items:center;justify-content:left;">
+                                            <img src="assets/images/uu_1.png" alt=""
+                                                style="margin-left:10px;width:16px;height:16px;">
+                                            <font style="margin-left:5px;font-size:12px;color:#777777;">03-06 20:00
+                                            </font>
+                                        </div>
+                                        <div
+                                            style="width:34%;height:100%;  display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div
+                                            style="width:30%;height:100%;text-align:right;overflow:hidden;white-space:nowrap;line-height:39px">
+                                            <font
+                                                style="width:100%;font-size:12px;color:#777777;transform: scale(.8);margin-right:10px">
+                                                ITA Campionato Primavera 1</font>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </li>
+
+                        <li style="margin-bottom:15px">
+                            <a href="">
+                                <div
+                                    style="width:100%;height:119px;background:linear-gradient(180deg,rgba(7,184,164,0.1)100%,rgba(7,184,164,0) 100%);border-radius:10px;">
+                                    <div style="width:27px;height26px;position:absolute;">
+                                        <img src="assets/images/a_15.png" alt="" style="width:27px;height:26px">
+                                    </div>
+                                    <div
+                                        style="width:100%;height:55px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-right" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_3.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="width:40%;height:100%;">
+                                            <div style="width:100%;height:30px;margin-top:23px">
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">Volume</font>
+                                                </div>
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">54706.58k
+                                                    </font>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="vcenter" style="width:100%;height:30px;">
+                                                <img src="assets/images/vs_lv.png" alt=""
+                                                    style="width:30px;height:20px;margin-top:25px">
+                                            </div>
+
+                                        </div>
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-left" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_2.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:20px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:100%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;margin-left:5px">KUBAN
+                                                    KRASNODAR </font>
+                                            </div>
+
+                                        </div>
+                                        <div
+                                            style="width:16%;height:100%;display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:98%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;"> RUBIN KAZAN</font>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:39px;display:flex;align-items:flex-start;justify-content:flex-start">
+                                        <div
+                                            style="width:33%;height:100%;  display:flex;align-items:center;justify-content:left;">
+                                            <img src="assets/images/uu_1.png" alt=""
+                                                style="margin-left:10px;width:16px;height:16px;">
+                                            <font style="margin-left:5px;font-size:12px;color:#777777;">03-06 20:30
+                                            </font>
+                                        </div>
+                                        <div
+                                            style="width:34%;height:100%;  display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div
+                                            style="width:30%;height:100%;text-align:right;overflow:hidden;white-space:nowrap;line-height:39px">
+                                            <font
+                                                style="width:100%;font-size:12px;color:#777777;transform: scale(.8);margin-right:10px">
+                                                RUS FNL</font>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </li>
+
+                        <li style="margin-bottom:15px">
+                            <a href="#">
+                                <div
+                                    style="width:100%;height:119px;background:linear-gradient(180deg,rgba(7,184,164,0.1)100%,rgba(7,184,164,0) 100%);border-radius:10px;">
+                                    <div style="width:27px;height26px;position:absolute;">
+                                        <img src="assets/images/a_15.png" alt="" style="width:27px;height:26px">
+                                    </div>
+                                    <div
+                                        style="width:100%;height:55px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-right" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_3.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="width:40%;height:100%;">
+                                            <div style="width:100%;height:30px;margin-top:23px">
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">Volume</font>
+                                                </div>
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">4596779.96k
+                                                    </font>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="vcenter" style="width:100%;height:30px;">
+                                                <img src="assets/images/vs_lv.png" alt=""
+                                                    style="width:30px;height:20px;margin-top:25px">
+                                            </div>
+
+                                        </div>
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-left" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_2.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:20px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:100%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;margin-left:5px">ARDA </font>
+                                            </div>
+
+                                        </div>
+                                        <div
+                                            style="width:16%;height:100%;display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:98%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;"> SPARTAK VARNA</font>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:39px;display:flex;align-items:flex-start;justify-content:flex-start">
+                                        <div
+                                            style="width:33%;height:100%;  display:flex;align-items:center;justify-content:left;">
+                                            <img src="assets/images/uu_1.png" alt=""
+                                                style="margin-left:10px;width:16px;height:16px;">
+                                            <font style="margin-left:5px;font-size:12px;color:#777777;">03-06 21:30
+                                            </font>
+                                        </div>
+                                        <div
+                                            style="width:34%;height:100%;  display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div
+                                            style="width:30%;height:100%;text-align:right;overflow:hidden;white-space:nowrap;line-height:39px">
+                                            <font
+                                                style="width:100%;font-size:12px;color:#777777;transform: scale(.8);margin-right:10px">
+                                                BUL First League</font>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </li>
+
+                        <li style="margin-bottom:15px">
+                            <a href="">
+                                <div
+                                    style="width:100%;height:119px;background:linear-gradient(180deg,rgba(7,184,164,0.1)100%,rgba(7,184,164,0) 100%);border-radius:10px;">
+                                    <div style="width:27px;height26px;position:absolute;">
+                                        <img src="assets/images/a_15.png" alt="" style="width:27px;height:26px">
+                                    </div>
+                                    <div
+                                        style="width:100%;height:55px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-right" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_3.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="width:40%;height:100%;">
+                                            <div style="width:100%;height:30px;margin-top:23px">
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">Volume</font>
+                                                </div>
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">7924.33k
+                                                    </font>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="vcenter" style="width:100%;height:30px;">
+                                                <img src="assets/images/vs_lv.png" alt=""
+                                                    style="width:30px;height:20px;margin-top:25px">
+                                            </div>
+
+                                        </div>
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-left" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_2.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:20px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:100%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;margin-left:5px">FC VOLUNTARI
+                                                </font>
+                                            </div>
+
+                                        </div>
+                                        <div
+                                            style="width:16%;height:100%;display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:98%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;"> ARGES</font>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:39px;display:flex;align-items:flex-start;justify-content:flex-start">
+                                        <div
+                                            style="width:33%;height:100%;  display:flex;align-items:center;justify-content:left;">
+                                            <img src="assets/images/uu_1.png" alt=""
+                                                style="margin-left:10px;width:16px;height:16px;">
+                                            <font style="margin-left:5px;font-size:12px;color:#777777;">03-06 22:00
+                                            </font>
+                                        </div>
+                                        <div
+                                            style="width:34%;height:100%;  display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div
+                                            style="width:30%;height:100%;text-align:right;overflow:hidden;white-space:nowrap;line-height:39px">
+                                            <font
+                                                style="width:100%;font-size:12px;color:#777777;transform: scale(.8);margin-right:10px">
+                                                ROM Liga I</font>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </li>
+
+                        <li style="margin-bottom:15px">
+                            <a href="">
+                                <div
+                                    style="width:100%;height:119px;background:linear-gradient(180deg,rgba(7,184,164,0.1)100%,rgba(7,184,164,0) 100%);border-radius:10px;">
+                                    <div style="width:27px;height26px;position:absolute;">
+                                        <img src="assets/images/a_15.png" alt="" style="width:27px;height:26px">
+                                    </div>
+                                    <div
+                                        style="width:100%;height:55px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-right" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_3.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="width:40%;height:100%;">
+                                            <div style="width:100%;height:30px;margin-top:23px">
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">Volume</font>
+                                                </div>
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">564482.25k
+                                                    </font>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="vcenter" style="width:100%;height:30px;">
+                                                <img src="assets/images/vs_lv.png" alt=""
+                                                    style="width:30px;height:20px;margin-top:25px">
+                                            </div>
+
+                                        </div>
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-left" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_2.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:20px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:100%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;margin-left:5px">SANDECJA NOWY
+                                                    SACZ </font>
+                                            </div>
+
+                                        </div>
+                                        <div
+                                            style="width:16%;height:100%;display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:98%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;"> ODRA OPOLE</font>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:39px;display:flex;align-items:flex-start;justify-content:flex-start">
+                                        <div
+                                            style="width:33%;height:100%;  display:flex;align-items:center;justify-content:left;">
+                                            <img src="assets/images/uu_1.png" alt=""
+                                                style="margin-left:10px;width:16px;height:16px;">
+                                            <font style="margin-left:5px;font-size:12px;color:#777777;">03-06 23:00
+                                            </font>
+                                        </div>
+                                        <div
+                                            style="width:34%;height:100%;  display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div
+                                            style="width:30%;height:100%;text-align:right;overflow:hidden;white-space:nowrap;line-height:39px">
+                                            <font
+                                                style="width:100%;font-size:12px;color:#777777;transform: scale(.8);margin-right:10px">
+                                                POL Liga 1</font>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </li>
+
+                        <li style="margin-bottom:15px">
+                            <a href="">
+                                <div
+                                    style="width:100%;height:119px;background:linear-gradient(180deg,rgba(7,184,164,0.1)100%,rgba(7,184,164,0) 100%);border-radius:10px;">
+                                    <div style="width:27px;height26px;position:absolute;">
+                                        <img src="assets/images/a_15.png" alt="" style="width:27px;height:26px">
+                                    </div>
+                                    <div
+                                        style="width:100%;height:55px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-right" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_3.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="width:40%;height:100%;">
+                                            <div style="width:100%;height:30px;margin-top:23px">
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">Volume</font>
+                                                </div>
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">456456472.67k
+                                                    </font>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="vcenter" style="width:100%;height:30px;">
+                                                <img src="assets/images/vs_lv.png" alt=""
+                                                    style="width:30px;height:20px;margin-top:25px">
+                                            </div>
+
+                                        </div>
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-left" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_2.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:20px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:100%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;margin-left:5px">SV WALDHOF
+                                                    MANNHEIM </font>
+                                            </div>
+
+                                        </div>
+                                        <div
+                                            style="width:16%;height:100%;display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:98%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;"> SV ELVERSBERG</font>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:39px;display:flex;align-items:flex-start;justify-content:flex-start">
+                                        <div
+                                            style="width:33%;height:100%;  display:flex;align-items:center;justify-content:left;">
+                                            <img src="assets/images/uu_1.png" alt=""
+                                                style="margin-left:10px;width:16px;height:16px;">
+                                            <font style="margin-left:5px;font-size:12px;color:#777777;">03-07 00:00
+                                            </font>
+                                        </div>
+                                        <div
+                                            style="width:34%;height:100%;  display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div
+                                            style="width:30%;height:100%;text-align:right;overflow:hidden;white-space:nowrap;line-height:39px">
+                                            <font
+                                                style="width:100%;font-size:12px;color:#777777;transform: scale(.8);margin-right:10px">
+                                                GER 3.Liga</font>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </li>
+
+                        <li style="margin-bottom:15px">
+                            <a href="">
+                                <div
+                                    style="width:100%;height:119px;background:linear-gradient(180deg,rgba(7,184,164,0.1)100%,rgba(7,184,164,0) 100%);border-radius:10px;">
+                                    <div style="width:27px;height26px;position:absolute;">
+                                        <img src="assets/images/a_15.png" alt="" style="width:27px;height:26px">
+                                    </div>
+                                    <div
+                                        style="width:100%;height:55px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-right" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_3.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="width:40%;height:100%;">
+                                            <div style="width:100%;height:30px;margin-top:23px">
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">Volume</font>
+                                                </div>
+                                                <div class="vcenter" style="width:100%;height:15px">
+                                                    <font style="font-size:14px;color:#777777;">456789658.16k
+                                                    </font>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="vcenter" style="width:100%;height:30px;">
+                                                <img src="assets/images/vs_lv.png" alt=""
+                                                    style="width:30px;height:20px;margin-top:25px">
+                                            </div>
+
+                                        </div>
+                                        <div style="width:30%;height:100%;">
+                                            <div class="vcenter-left" style="width:100%;height:55px;">
+                                                <div style="width:50px;height:50px;">
+                                                    <img src="assets/images/uu_2.png" alt=""
+                                                        style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:20px;display:flex;align-items:center;justify-content:center;">
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:100%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;margin-left:5px">SEPSI OSK
+                                                    SFANTUL GHEORGHE </font>
+                                            </div>
+
+                                        </div>
+                                        <div
+                                            style="width:16%;height:100%;display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div style="width:42%;height:100%;">
+                                            <div
+                                                style="width:98%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                                <font style="color:#3a5277;font-size:13px;"> CFR CLUJ</font>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:100%;height:39px;display:flex;align-items:flex-start;justify-content:flex-start">
+                                        <div
+                                            style="width:33%;height:100%;  display:flex;align-items:center;justify-content:left;">
+                                            <img src="assets/images/uu_1.png" alt=""
+                                                style="margin-left:10px;width:16px;height:16px;">
+                                            <font style="margin-left:5px;font-size:12px;color:#777777;">03-07 00:30
+                                            </font>
+                                        </div>
+                                        <div
+                                            style="width:34%;height:100%;  display:flex;align-items:center;justify-content:center;">
+
+                                        </div>
+                                        <div
+                                            style="width:30%;height:100%;text-align:right;overflow:hidden;white-space:nowrap;line-height:39px">
+                                            <font
+                                                style="width:100%;font-size:12px;color:#777777;transform: scale(.8);margin-right:10px">
+                                                ROM Liga I</font>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+                <!-- 今日头条 -->
+                <div class="tab_con">
+                    <ul class="ul-news">
+
+                        <li style="margin-bottom:15px">
+                            <a href="" class="con">
+                                <div
+                                    style="display:flex;align-items:center;justify-content:center;width:100%;height:109px;">
+                                    <div style="width:70%;height:100%;">
+                                        <div
+                                            style="width:100%;height:70px;display:flex;align-items:center;justify-content:left;">
+                                            <p style="margin-left:15px;color:#dddddd">Bind bank information</p>
+                                        </div>
+                                        <div
+                                            style="width:100%;height:39px;display:flex;align-items:flex-start;justify-content:flex-start">
+                                            <font style="color:#777777;font-size:12px;margin-left:15px">2022-09-30
+                                            </font>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="width:30%;height:100%;display:flex;align-items:center;justify-content:center;">
+                                        <img src="assets/images/c_j2.jpg" alt=""
+                                            style="width:70px;height:70px;border-radius:20px">
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- APP下载 -->
+                <div class="tab_con">
+                    <ul class="ul-news">
+                        <li>
+                            <div class="pic">
+                                <div class="vcenter" style="width:100%;margin-top:40px">
+                                    <!--<img src="/uploads/images/20220817/a05e631e90fd5a82ad3c798b0f0c9705.png" style="width:55%;height:auto;border-radius:10px" alt="">-->
+                                    <font style="font-size:13px;color:#eeeeee">APP Download Address:</font>
+
+                                </div>
+                                <div class="vcenter" style="width:100%;margin-top:15px">
+                                    <!--<img src="/uploads/images/20220817/a05e631e90fd5a82ad3c798b0f0c9705.png" style="width:55%;height:auto;border-radius:10px" alt="">-->
+
+                                    <input type="text"
+                                        style="width:150px;font-size:13px;height:30px;color:#eeeeee;border:0px;background:rgba(0,0,0,0);margin-left:5px"
+                                        value="https://fir.yubo66.com" readonly>
+                                </div>
+                                <div class="vcenter" style="width:100%;margin-top:40px">
+                                    <input type="text"
+                                        style="width:1px;font-size:13px;height:30px;color:#eeeeee;border:0px;background:rgba(0,0,0,0);margin-left:5px"
+                                        value="https://fir.yubo66.com" readonly><a href="javascript:;"
+                                        class="btn js-cp-s1" style="color:#eeeeee">Copy<i
+                                            style="display:inline-block;vertical-align:-7px;margin-right:2px;width:24px;height:24px;background:url('assets/images/xx_9.png') center no-repeat;-webkit-background-size:contain;background-size:contain;"></i></a>
+                                </div>
+
+
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='tanchuang'
+        style="display:none;position: fixed;overflow: auto;top: 0;right: 0;bottom: 0;left: 0;height: 100%;z-index: 999;background-color: rgba(0,0,0,.4);">
+        <div class="my-modal-wrap">
+            <div>
+                <div style="width: 100%;height: 100%;position: relative;">
+                    <div class="my-modal-content">
+                        <div class="my-modal-body">
+                            <div style="display: flex;justify-content: flex-end;webkit-justify-content: flex-end;"><i
+                                    id="tclose" class="tclose"
+                                    style="margin-bottom: 12px;    width: 28px;height: 28px;background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAQAAAACj/OVAAAACXBIWXMAABYlAAAWJQFJUiTwAAACm0lEQVR42u2Y0XGjMBCGQwekA7sD0gGp4EgF56vAvgpCBWcqCOmADo4OTAeoA6sDfTexNKfxrHVro9xT/PPECPjY3V8rwcNdX0eU1LwyYLB4GUYGtlSfD6vpsaRl6Fl9HmwEoiyGiZEJw7nyoVSMRFDH5vyRfFyxZSTqF+Vy3BaCRmo5HrGs2GDwmqmWWaTHywhYCtuGOjt2t+MmvLqzAQ25ZgzI1yU4m4hNifNmJHsAjOI5Hfn9uhteAbAqTkce0Z/BCq8mazoVdAAc9EsNAG0Gzcf4iEH3KxsATAYrIp9DWks9vkbWlT51Y+g3A41I67uSLWoAxoRrJ8oE7gkLOGoxKwGOaeA7gDQzHURkAgeObyLGgfgiUljAJBtBQCZw0Cbr+PavhPZiQCJ1XIzRJpNKCxDToiJVXEzqxQbAABCXFg1JpeB8Dn4Cjs2lwQkgnOjIWsMF4Iu/RrOMjkTBxSqnbIOcgzqy1VfIDGB0c9BMmQucVFyFJepAuRxoAHM1zhKRegvfJ10qbk90lVhLgZQudezSnbRSccEqCjIuxKluyg6A3RW4IB41JAUj4C6OUgEwouOCEMiEZQ7p1QJZRdnEVGQc/SEtI9t3i+iyEieRsmNSMAGOKt1FAKx40waHC7g0cmYlpoS2c+N3IsZK+ZgpaShFfEbdDlOFGNf5u7bg+vm6bf5IkYlbY0X9EnWcvbPI3AYHf+qixoVKLsdNymoie05AFhm46FpdtHjtKbi1dgaAo6iehgyJNawjVMVtsYu/89lxxKvXoYTfK0oy1W/FGfcX+kzxgeUBMe3Pfp3sFauocc4QZBnY8cITq9NRsaGLKPl7ZWmcrY9UkYBliYaeI+4i2NAlYLmioqHljf50dGxPTfuuu/6v/gA0rkmSusF0QQAAAABJRU5ErkJggg==);background-repeat: no-repeat;background-size: contain;"></i>
+                            </div>
+                            <div class="TimeLimitedModal_container__3Awlm TimeLimitedModal_active__2Nb9f">
+                                <div class="TimeLimitedModal_inner__uxOPj TimeLimitedModal_active__2Nb9f">
+                                    <div class="TimeLimitedModal_tabs__3xlLr">
+                                        <div class="TimeLimitedModal_tabItem__9TkFH TimeLimitedModal_active__2Nb9f">
+                                            Important Notification</div>
+                                    </div>
+                                    <div class="TimeLimitedModal_body__29-at">
+                                        <div class="TimeLimitedModal_notice__2t9iE">
+                                            <div class="TimeLimitedModal_scroll__3ADOX">
+                                                <ul class="TimeLimitedModal_list__1Q8Md">
+                                                    <li style="font-size:14px;" class="TimeLimitedModal_item__1tef9">
+                                                        <p>Dear player:<br />
+                                                            If you have never withdrawn, it is recommended that you use
+                                                            the same bkash or nagad as your Yubo account to withdraw, so
+                                                            that you can withdraw quickly and successfully. For the
+                                                            security of your account, please keep in mind your login
+                                                            password and withdrawal password at all times. If the
+                                                            password is disclosed, the consequences shall be borne by
+                                                            you.</p>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                            <div id="guanbi" class="TimeLimitedModal_btn__4qjsT">Details</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="yincan" class="TimeLimitedModal_checkWrapper__3mR_c"><i class=""></i><span>Do not
+                                    repeat</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="h55"></div>
+        <ul class="ul-tabbar">
+            <li class="on">
+                <a href="index.html">
+                    <i class="i1"></i>
+                    <span class="txt">Home</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="transaction.html">
+                    <i class="i2"></i>
+                    <span class="txt">Transaction</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="my-team.html">
+                    <i class="i3"></i>
+                    <span class="txt">My team</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="my.html">
+                    <i class="i5"></i>
+                    <span class="txt">My</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="assets/js/jquery.countup.min.js"></script>
+    <script src="assets/js//jquery.waypoints.min.js"></script>
+    <script src="assets/js//lib.js "></script>
+    <script src="assets/js//query.js"></script>
+    <script src="assets/js/chinese.js"></script>
+    <script>
+        layui.use(['layer', 'form'], function () {
+            var layer = layui.layer
+                , form = layui.form;
+        });
+        $(function () {
+
+            $('.banner').slick({
+                dots: false,
+                arrows: false,
+                autoplay: true,
+                speed: 500,
+                slidesToShow: 1,
+            });
+
+            $('.slick_tab').slick({
+                dots: false,
+                arrows: false,
+                autoplay: false,
+                touchMove: false,
+                swipe: false,
+                speed: 300
+            });
+
+            $('.slick_tab_btn li').click(function (event) {
+
+                $(this).addClass('on').siblings('li').removeClass('on');
+                $('.slick_tab').slick('slickGoTo', $(this).index());
+
+            });
+
+
+
+            $('.m-notice .notice').slick({
+                dots: false,
+                arrows: false,
+                autoplay: true,
+                speed: 500,
+                slidesToShow: 1,
+                vertical: true
+            });
+
+
+            $('.counter').countUp();
+        });
+        $('.js-cp-s1').click(function (event) {
+            $(this).siblings('input').select();
+            document.execCommand('Copy');
+            layer.msg("Copy success");
+        });
+        function toSaishi(type) {
+            window.location.href = '/index/saishi/index.html' + '?type=' + type;
+        }
+
+
+        $('#yincan').click(function (event) {
+            //alert(123);
+            var d = new Date();
+            if (localStorage.getItem('advertise') == "210") {
+                localStorage.setItem('advertise', 'B');
+                $('#yincan i').removeClass('TimeLimitedModal_checked__3t0yr');
+            } else {
+                localStorage.setItem('advertise', "210");
+                $('#yincan i').addClass('TimeLimitedModal_checked__3t0yr');
+            }
+        });
+        $('#tclose').click(function (event) {
+            $("#tanchuang").css({ "display": "none" });
+        });
+        $('#guanbi').click(function (event) {
+            $("#tanchuang").css({ "display": "none" });
+        });
+        if (localStorage.getItem('advertise') != "210") {
+            $("#tanchuang").css({ "display": "block" });
+        }
+    </script>
+    
+    <!-- slick slider js -->
+
+</body>
+
+</html>

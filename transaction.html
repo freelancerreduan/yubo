@@ -1,0 +1,3309 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="renderer" content="webkit" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>Transaction</title>
+	<link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+    .vcenter{
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+.vcenter-left{
+  display:flex;
+  align-items:center;
+  justify-content:left
+}
+.vcenter-right{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end
+}
+.vcenter-bottom{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+.vcenter-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+}
+.vcenter-top-left{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+.vcenter-top-right{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-end;
+}
+.vcenter-bottom-left{
+    display:flex;
+  align-items:flex-end;
+  justify-content:left;
+}
+.vcenter-bottom-right{
+    display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+}
+.btn{
+    background:linear-gradient(90deg, #07B8A4 1.38%, #0EC77B 100%);box-shadow: 0px 6px 8px rgba(7,184,164,0.14);border-radius:8px;
+}
+.div1{
+    width:95%;height:100px;background:linear-gradient(180deg,rgba(7,184,164,0.1)100%,rgba(7,184,164,0.1)100%);border-top:1px solid rgba(7,184,164,0.18);border-radius:10px;overflow:hidden
+}
+.div2{
+    width:95%;height:302px;background:linear-gradient(180deg,rgba(7,184,164,0.1)0%,rgba(7,184,164,0)100%);border-top:1px solid rgba(7,184,164,0.18);border-radius:10px;overflow:hidden
+}
+.btn_{
+    background:linear-gradient(90deg, #07B8A4 1.38%, #0EC77B 100%);box-shadow: 0px 6px 8px rgba(7,184,164,0.14);border-radius:8px;
+}
+    </style>
+    <script>
+        function setDiv(id){
+            var c=$("#d_"+id).attr("alt");
+            if(c=="off"){
+               $("#d_"+id).attr('class','div2');
+               $("#d_"+id).attr('alt','on');
+               $("#img_"+id).attr('src','https://yubo55.com/static/tg60/images/ll_5_lv.png');
+            }else{ 
+               $("#d_"+id).attr('class','div1');
+               $("#d_"+id).attr('alt','off');
+               $("#img_"+id).attr('src','https://yubo55.com/static/tg60/images/ll_6_lv.png');
+            }
+        }
+    </script>
+</head>
+
+
+
+<body class="index"  style="background-color:#fff;padding-top:50px">
+<!-- 头部 --> 
+<div class="header"  > 
+    <div class="wp" style="background-color:#fff">
+        <span class="menuBtn" ></span> 
+              <div class="vcenter-right"  onclick="javascript:window.location.href='/index/user/rule.html';" style="width:120px;height:45px;position:absolute;right:0px">
+            <font class="btn_" style="margin-right:10px;color:#eeeeee;font-size:13px;padding-left:5px;padding-right:5px;height:30px;border-radius:5px;padding-top:4px;white-space: nowrap;">Rules Description</font>
+        </div>
+        <div class="vcenter" style="width:100%;height:45px;">
+            <p style="font-size:20px;background: linear-gradient(90deg, #07B8A4 1.38%, #0EC77B 100%);background-clip: text;color: transparent;-webkit-background-clip: text;font-weight:bold;transform: scale(.9)">Transaction</p> 
+        </div>
+        
+    </div>
+</div>
+
+<!-- 头部 -->
+<!-- 引入共用左边导航栏 -->
+
+<!--左边列表-->
+
+<script src="/static/tg60/chinese.js"></script>
+<style>
+    @media screen and (max-width: 680px){
+
+        #daohanglkan{
+            overflow: auto;height: 474PX;
+
+        }
+    }
+
+</style>
+<!-- snav -->
+  <div class="snav">
+    <div class="mask"></div>
+    <div class="con">
+        <div class="snav-logo">
+            <img src="../../static/tg60/images/logo400_lv_2.png" style="width:100px;height:auto"  alt="">
+
+        </div>
+        <div class="top">
+          
+        </div>
+        
+        
+        <ul class="nav" id="daohanglkan">
+            <li>
+                <div class="vcenter-left" style="width:80%;height:40px;">
+                    <img src="../../static/tg60/images/Vector_lv.png" width="15px" height="15px">
+        
+                    <select  id="chind" style="width:80px;height:20px;margin-left:17px;color:#6d81a4;border:0px;background:url('../../static/tg60/images/rr_1_lv.png') right no-repeat;background-size:14px;font-size:14px;background-color:#fff;">
+                        <option>Language</option>
+                        <option value='en'>English</option>
+                        <option value="vi">Việt nam</option>
+                        <!--<option value="cntw">繁体中文</option>-->
+                        <option value="cn">简体中文</option>
+                        <option value='en'>বাংলা</option>
+                        <option value='en'>भारत</option>
+                        <option value='en'>ไทย</option>
+                        <option value='en'>日本</option>
+                        <option value='en'>Indonesia</option>
+                    </select>
+                </div>
+        
+
+
+            </li>
+        
+            <li>
+                <a href="/index/saishi/jieguo.html" class="v1">
+                    <i style="background-image: url(../../static/tg60/images/c_n4.png)"></i>
+                    <span style="color:#6d81a4">Sports results</span>
+                </a>
+            </li>
+            <li>
+                <a href="/index/user/tuijian.html" class="v1">
+                    <i style="background-image: url(../../static/tg60/images/c_n1.png)"></i>
+                    <span style="color:#6d81a4">My team</span>
+                </a>
+            </li>
+            <li>
+                <a href="/index/user/account2.html" class="v1">
+                    <i style="background-image: url(../../static/tg60/images/c_n2.png)"></i>
+                    <span style="color:#6d81a4">MoneyLog</span>
+                </a>
+            </li>
+            <li>
+                <a href="/index/user/xiazhutongji.html" class="v1">
+                    <i style="background-image: url(../../static/tg60/images/c_n5.png)"></i>
+                    <span style="color:#6d81a4">Accounting</span>
+                </a>
+            </li>
+            <li>
+                <a href="/index/user/fanyong.html" class="v1">
+                    <i style="background-image: url(../../static/tg60/images/c_n3.png)"></i>
+                    <span style="color:#6d81a4">Commission</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/index/news/index.html" class="v1">
+                    <i style="background-image: url(../../static/tg60/images/c_n6.png)"></i>
+                    <span style="color:#6d81a4">Communique</span>
+                </a>
+            </li>
+            <li>
+                <a href="/index/user/certificate.html" class="v1">
+                    <i style="background-image: url(../../static/tg60/images/c_n4.png)"></i>
+                    <span style="color:#6d81a4">Business license</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="loginOut()" class="v1">
+                    <i style="background-image: url(../../static/tg60/images/c_n7.png)"></i>
+                    <span style="color:#6d81a4">Safety exit</span>
+                </a>
+            </li>
+            <li><a href="" class="v1">&nbsp;</a></li>
+            
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" charset="utf-8">
+    //语言
+    $('#chind').change(function(){
+        var data={'lang':$('#chind').val()}
+        $.get("/index/login/lang.html",data,function(){
+            location.reload();
+        })
+    })
+    var isPost=true;
+    function loginOut(){
+              if(isPost){
+                    isPost=false;
+                    $.post("/index/login/out.html",{},function(data){
+                       window.location.href=data.url;
+                    });
+                }
+    }
+</script>
+<!-- banner -->
+
+
+<div class="main">
+	<div class="wp">
+		
+		        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_3143807" onclick="setDiv(3143807)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-25 21:41</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         330 </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Sturm Graz VS SK Austria Klagenfurt</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_3143807" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-25 22:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.35</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-2                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				332BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2815473" onclick="setDiv(2815473)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-21 23:05</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         327                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Portugal (w) U19 VS Poland (w) U19</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2815473" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-22 00:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.33</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-1                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				329BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2594849" onclick="setDiv(2594849)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-18 22:59</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         325                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Oostende VS Charleroi</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2594849" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-18 23:15:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.32</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    0-0                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				327BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2576076" onclick="setDiv(2576076)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-18 13:51</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         323                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">St George City FA VS Western Sydney Wanderers AM</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2576076" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-18 14:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.30</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-0                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				325BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2524943" onclick="setDiv(2524943)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-17 22:09</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         320                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Al-Wasl VS Al Nasr Dubai</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2524943" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-17 22:15:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.28</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    2-0                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				322BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2479497" onclick="setDiv(2479497)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-17 07:32</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         318                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Juventus Managua VS UNAN Managua</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2479497" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-17 08:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.27</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    0-4                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				320BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2458914" onclick="setDiv(2458914)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-16 23:03</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         316                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">AFC Ajax VS Union Berlin</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2458914" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-16 23:45:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.25</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    0-0                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				318BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2443104" onclick="setDiv(2443104)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-16 17:10</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         316                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">FC Abdysh-Ata Kant VS  Lisen</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2443104" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-16 18:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;0.00</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                                        </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				316BDT    				</span></td>
+    				    				<td><span style="color:#6a7382;font-size:14px;">The match has been cancelled.</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2408791" onclick="setDiv(2408791)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-16 07:05</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         314                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Necaxa VS Pumas U.N.A.M.</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2408791" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-16 09:05:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.24</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    3-1                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				316BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2391899" onclick="setDiv(2391899)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-15 23:47</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         311                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Ah so Santa SP VS Red Bull Bragantino</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2391899" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-16 00:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.22</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-0                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				313BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2339271" onclick="setDiv(2339271)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-15 06:35</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         309                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Independiente Santa Fe VS Deportivo Pasto</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2339271" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-15 07:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.20</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    0-2                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				311BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2301131" onclick="setDiv(2301131)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-14 14:17</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         307                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Vista Gelendzhik VS  Chernomorets Novorossijsk</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2301131" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-14 15:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.19</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-2                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				309BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2274800" onclick="setDiv(2274800)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-14 06:09</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         305                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Dunbeholden FC VS Humble Lions</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2274800" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-14 06:30:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.17</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-2                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				307BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2266403" onclick="setDiv(2266403)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-14 00:21</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         303                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Maccabi Netanya VS Maccabi Tel Aviv</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2266403" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-14 00:30:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.16</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    2-1                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				305BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2198491" onclick="setDiv(2198491)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-12 22:30</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         301                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Real Valladolid VS Osasuna</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2198491" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-12 23:30:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.14</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    0-0                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				303BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2179372" onclick="setDiv(2179372)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-12 14:21</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         298                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Sreenidi Deccan VS Rajasthan Club</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2179372" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-12 15:30:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.12</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    2-0                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				300BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2153853" onclick="setDiv(2153853)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-12 07:17</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         296                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">America de Cali VS La Equidad</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2153853" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-12 07:30:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.11</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-1                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				298BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2137300" onclick="setDiv(2137300)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-11 23:52</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         294                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">CS Universitatea Craiova VS CFR Cluj</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2137300" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-12 00:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.09</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    2-0                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				296BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2094557" onclick="setDiv(2094557)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-11 07:52</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         292                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Club Tijuana VS Atletico San Luis</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2094557" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-11 09:10:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.08</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-0                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				294BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2073321" onclick="setDiv(2073321)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-10 21:20</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         292                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Botev Plovdiv VS Lokomotiv Sofia</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2073321" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-10 21:30:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;0.00</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                                        </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				292BDT    				</span></td>
+    				    				<td><span style="color:#6a7382;font-size:14px;">The match has been cancelled.</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2048513" onclick="setDiv(2048513)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-10 11:21</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         290                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Sydney United 58 U20 VS  Mt Druitt Town Rangers U20</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2048513" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-10 12:30:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.07</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-0                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				292BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2033487" onclick="setDiv(2033487)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-10 07:07</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         288                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">AD San Carlos VS Deportivo Saprissa</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2033487" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-10 08:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.05</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    0-0                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				290BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_2001014" onclick="setDiv(2001014)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-09 16:30</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         286                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Gokulam Kerala FC VS Minerva Punjab</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_2001014" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-09 17:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.04</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-2                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				288BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1988700" onclick="setDiv(1988700)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-09 11:02</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         284                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">PSM Makassar VS Barito Putera</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1988700" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-09 14:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.02</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    4-1                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				286BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1976505" onclick="setDiv(1976505)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-09 07:30</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         282                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Alajuelense VS Perez Zeledon</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1976505" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-09 08:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;2.01</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    2-1                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				284BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1946122" onclick="setDiv(1946122)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-08 17:32</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         280                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Bekescsaba VS Zalaegerszegi TE</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1946122" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-08 18:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.99</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    0-2                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				282BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1928698" onclick="setDiv(1928698)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-08 12:22</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         280                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">PSIS Semarang VS Persebaya Surabaya</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1928698" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-08 14:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;0.00</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                                        </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				280BDT    				</span></td>
+    				    				<td><span style="color:#6a7382;font-size:14px;">The match has been cancelled.</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1910984" onclick="setDiv(1910984)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-08 07:06</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         278                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Herediano VS Santos De Guapiles</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1910984" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-08 08:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.98</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    2-1                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				280BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1897240" onclick="setDiv(1897240)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-07 23:46</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         276                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Vasas FC VS Budapest Honved FC</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1897240" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-08 00:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.97</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    2-0                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				278BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1890574" onclick="setDiv(1890574)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-07 19:56</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         274                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Al-Budaiya VS Al-Hala</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1890574" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-07 20:45:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.95</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    0-2                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				276BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1856281" onclick="setDiv(1856281)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-07 07:46</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         272                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Pioneros de Cancun VS  Tho Mayas</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1856281" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-07 08:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.94</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-1                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				274BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1839009" onclick="setDiv(1839009)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-06 22:48</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         270                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Verona VS Lazio</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1839009" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-06 23:30:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.92</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-1                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				272BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1818945" onclick="setDiv(1818945)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-06 14:50</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         268                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Samaxı FC VS Turan Tovuz</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1818945" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-06 16:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.91</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    0-1                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				270BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1782814" onclick="setDiv(1782814)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-05 19:47</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         266                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">VfB Stuttgart VS Werder Bremen</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1782814" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-05 20:30:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.90</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    0-2                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				268BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1775768" onclick="setDiv(1775768)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-05 16:19</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         265                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Penafiel VS CD Mafra</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1775768" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-05 17:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.89</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-0                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				267BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1748334" onclick="setDiv(1748334)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-05 07:22</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         263                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Antigua GFC VS C.S.D. Comunicaciones</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1748334" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-05 08:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.87</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-2                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				265BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1721087" onclick="setDiv(1721087)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-04 15:24</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         261                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Somaspor VS Amedspor</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1721087" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-04 16:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.86</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-1                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				263BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1713551" onclick="setDiv(1713551)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-04 12:41</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         259                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Wofoo Tai Po VS Eastern A.A Football Team</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1713551" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-04 13:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.85</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-2                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				261BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1699592" onclick="setDiv(1699592)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-04 08:08</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         257                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Mazatlan FC VS FC Juarez</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1699592" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-04 09:05:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.83</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    2-3                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				259BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1680615" onclick="setDiv(1680615)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-03 20:44</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         255                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Chindia Targoviste VS UTA Arad</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1680615" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-03 21:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.82</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    2-1                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				257BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1671238" onclick="setDiv(1671238)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-03 16:25</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         254                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Trau FC VS Mohammedan SC</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1671238" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-03 17:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.81</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    0-0                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				256BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1661887" onclick="setDiv(1661887)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-03 12:03</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         252                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Wollongong Wolves U20 VS  APIA Leichhardt Tigers U20</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1661887" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-03 12:30:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.80</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    0-1                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				254BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1635503" onclick="setDiv(1635503)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-02 22:46</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         250                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Adana Demirspor VS Fenerbahce</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1635503" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-02 23:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.78</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    1-1                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				252BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1631235" onclick="setDiv(1631235)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-02 19:44</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         248                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Konyaspor VS Istanbulspor</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1631235" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-02 20:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.77</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    0-1                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				250BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1596335" onclick="setDiv(1596335)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-02 05:05</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         246                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px">Anapolis FC VS Goiania</font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1596335" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;2023-02-02 05:30:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;4-4</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.75</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    4-0                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">+
+    				248BDT    				</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1587597" onclick="setDiv(1587597)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-01 22:21</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         245                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px"></font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1587597" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;1970-01-01 06:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.75</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    CNo settlement                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">CNo settlement</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1580045" onclick="setDiv(1580045)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-01 18:16</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         243                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px"></font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1580045" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;1970-01-01 06:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.73</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    CNo settlement                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">CNo settlement</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			        <div class="vcenter" style="width:100%;margin-top:20px">
+            <div id="d_1555304" onclick="setDiv(1555304)" alt="off" class="div1">
+                <div class="vcenter" style="width:100%;margin-top:15px;min-height:30px">
+                    <div class="vcenter-left" style="width:60%;">
+                        <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction time:</br>2023-02-01 07:24</font>
+                    </div>
+                    <div class="vcenter-right" style="width:40%;">
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">Amount:</font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px">
+                         241                        </font>
+                        <font style="color:#07B8A4;font-size:14px;margin-left:2px;margin-right:10px;">BDT</font>
+                    </div>
+                    
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:3px;">
+     
+                      <div style="width:90%;height:100%;text-align:left;overflow:hidden;white-space:nowrap;line-height:20px">
+                       <font style="width:100%;font-size:16px;color:#07B8A4;margin-left:17px"></font>
+                    </div>
+                                   
+                    <div class="vcenter-right" style="width:10%;">
+                       <img id="img_1555304" src="https://yubo55.com/static/tg60/images/ll_6_lv.png" width="24px" height="24px" style="margin-right:15px">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="vcenter" style="width:100%;margin-top:10px;">
+                   <div style="width:95%;height:1px;background:rgba(255,255,255,0.1)">
+                       
+                   </div>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:10px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">The start time:&nbsp;&nbsp;1970-01-01 06:00:00</font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction type:&nbsp;&nbsp;
+                   Inverse score-
+                                      Full time</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Transaction score:&nbsp;&nbsp;</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit odds:&nbsp;&nbsp;0.75%</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Estimated profit:&nbsp;&nbsp;1.72</font>
+                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                    <font style="color:#6a7382;font-size:14px;margin-left:17px">Match results:&nbsp;&nbsp;
+                    CNo settlement                    </font>
+                </div>
+                 <div class="vcenter-left" style="width:100%;margin-top:6px;">
+                   <font style="color:#6a7382;font-size:14px;margin-left:17px">Profit result:&nbsp;&nbsp;</font>
+                        				<td><span style="color:#6a7382;font-size:14px;">CNo settlement</span></td>
+    				                </div>
+                <div class="vcenter-left" style="width:100%;margin-top:2px;">
+                                   </div>
+              
+		    </div>  
+		</div>
+			
+		</div>
+	</div>
+</div>
+
+
+<div class="footer">
+   <div class="h55"></div>
+   <ul class="ul-tabbar">
+       <li class="on">
+           <a href="index.html">
+               <i class="i1"></i>
+               <span class="txt">Home</span>
+           </a>
+       </li>
+       <li class="">
+           <a href="transaction.html">
+               <i class="i2"></i>
+               <span class="txt">Transaction</span>
+           </a>
+       </li>
+       <li class="">
+           <a href="my-team.html">
+               <i class="i3"></i>
+               <span class="txt">My team</span>
+           </a>
+       </li>
+       <li class="">
+           <a href="my.html">
+               <i class="i5"></i>
+               <span class="txt">My</span>
+           </a>
+       </li>
+   </ul>
+</div>
+
+
+<script>
+	$('.js-expand-s1').click(function() {
+		$(this).parents('.info').toggleClass('ok').find('.detail').stop().slideToggle();
+	})
+</script>
+<script src="assets/js/jquery.countup.min.js"></script>
+<script src="assets/js//jquery.waypoints.min.js"></script>
+<script src="assets/js//lib.js "></script>
+<script src="assets/js//query.js"></script>
+<script src="assets/js/chinese.js"></script>   
+</body>
+
+</html>
