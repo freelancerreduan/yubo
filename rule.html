@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+        <meta name="renderer" content="webkit" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>Home</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- slik slider -->
+        <!-- ai link gola head tege a pest korte hoi -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">   
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> 
+        <style>
+            .vcenter {
+                display: flex;
+                align-items: center;
+                justify-content: center
+            }
+    
+            .vcenter-left {
+                display: flex;
+                align-items: center;
+                justify-content: left
+            }
+    
+            .vcenter-right {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end
+            }
+    
+            .vcenter-bottom {
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+            }
+    
+            .vcenter-top {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+            }
+    
+            .vcenter-top-left {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+    
+            .vcenter-top-right {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-end;
+            }
+    
+            .vcenter-bottom-left {
+                display: flex;
+                align-items: flex-end;
+                justify-content: left;
+            }
+    
+            .vcenter-bottom-right {
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+            }
+    
+            .my-modal-wrap {
+                position: fixed;
+                overflow: auto;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                height: 100%;
+                z-index: 999;
+                -webkit-overflow-scrolling: touch;
+                outline: 0;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+            }
+    
+            .my-modal-content {
+                background-color: initial;
+                overflow: auto;
+                position: relative;
+                border: 0;
+                background-clip: padding-box;
+                text-align: center;
+                height: 100%;
+            }
+    
+            .my-modal-body {
+                font-size: .3rem;
+                color: #6c7ba8;
+                height: 100%;
+                line-height: 1.5;
+                overflow: auto;
+            }
+    
+            .TimeLimitedModal_container__3Awlm {
+                border-radius: 24px;
+                width: 310px;
+                height: 410px;
+                background-color: #07B8A4;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at {
+                height: calc(100% - 42px);
+                display: -webkit-flex;
+                display: flex;
+                -webkit-justify-content: flex-end;
+                justify-content: flex-end;
+                -webkit-flex-direction: column;
+                flex-direction: column;
+                padding-bottom: 24px;
+                background-color: #f1f4f8;
+                border-radius: 0 0 24px 24px;
+            }
+    
+            .TimeLimitedModal_modal__3Mp-L .TimeLimitedModal_container__3Awlm .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_tabs__3xlLr {
+                display: -webkit-flex;
+                display: flex;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj {
+                position: relative;
+                height: 100%;
+                -webkit-transition: all .2s;
+                transition: all .2s;
+                /* background: url(/_next/static/chunks/images/bg_poptabsel_letf-6d70043….png) no-repeat 0 0/6.2rem 1.32rem,url(/_next/static/chunks/images/bg_poptabsel_middle-b2397ad….png) no-repeat 0 1.3rem/6.2rem 8.56rem; */
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_tabs__3xlLr .TimeLimitedModal_tabItem__9TkFH {
+                -webkit-flex: 1 1;
+                flex: 1 1;
+                text-align: center;
+                line-height: 42px;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: PingFang SC;
+                color: #fff;
+                -webkit-transition: all .2s;
+                transition: all .2s;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE {
+                height: 100%;
+                padding: 24px 24px 0;
+                box-sizing: border-box;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX {
+                height: calc(100% - 60px);
+                overflow-y: scroll;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX .TimeLimitedModal_list__1Q8Md .TimeLimitedModal_item__1tef9 {
+                text-align: left;
+                color: #6c7ba8;
+                font-family: PingFang SC;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX .TimeLimitedModal_list__1Q8Md .TimeLimitedModal_item__1tef9 .TimeLimitedModal_title__LXjmZ {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 40px;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX .TimeLimitedModal_list__1Q8Md .TimeLimitedModal_item__1tef9 .TimeLimitedModal_content__2CjhE {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_btn__4qjsT {
+                line-height: 40px;
+                height: 40px;
+                width: 262px;
+                text-align: center;
+                font-family: PingFang SC;
+                font-weight: 500;
+                font-size: 16px;
+                color: #fff;
+                border-radius: 20px;
+                margin: 20px auto 0;
+                background: -webkit-linear-gradient(top, #97ccff, #07B8A4);
+                background: linear-gradient(180deg, #97ccff, #07B8A4);
+                box-shadow: 0 2px 4px rgba(93, 167, 235, .8);
+            }
+    
+            .TimeLimitedModal_checkWrapper__3mR_c {
+                display: -webkit-flex;
+                display: flex;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                padding-top: .4rem;
+            }
+    
+            .TimeLimitedModal_checkWrapper__3mR_c i {
+                width: 14px;
+                height: 14px;
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIVBMVEVMaXH///////////////////////////////////////8c1D1MAAAACnRSTlMAIEBBj5Cvvu7vLtBcNAAAAElJREFUeNpjYKxcBQfLBBgkVyGBRoasVUhgOcOqpUpwELWCYdUiBjiwWjXKxcedtcQYBJRAwGsVQ9UqJLCMQQI12BmzVsHBdAEA0SlmDw9W4MoAAAAASUVORK5CYII=);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+    
+            .TimeLimitedModal_checkWrapper__3mR_c i.TimeLimitedModal_checked__3t0yr {
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP1BMVEVMaXE/d/dAdflAdPlBdflBdvn////+///z9/7J2P64zP23zP2sw/2gu/2UsvyIqfx8oPxlkPpkkPpYh/tBdvo7SxPoAAAABnRSTlMAIK++7/72TMLkAAAAhElEQVR42qXSQRKCMAxA0aQtAVSwQu5/Vh1l+kewXcjftS+7RERjcqKgIgrtSirBq0XxeqmF3R+4NnCyK3gwsxk8WJ9/491eTQ4ueW/gMmxPDBzLR94MZPwxYG9Ei4HoDftCn+3TBQN9MgwsioFoPzZWtp5eNphaGOsY2kctGjpyKKo8Aep5NLNjZ5vuAAAAAElFTkSuQmCC);
+            }
+    
+            .TimeLimitedModal_checkWrapper__3mR_c span {
+                margin-left: 8px;
+                font-family: PingFang SC;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                color: #fff;
+            }
+        </style>
+    </head>
+
+<body class="index"  style="background-color:#fff;padding-top:0px">
+<!-- 头部 --> 
+<div class="vcenter" style="width:100%;margin-top:10px;">
+        <div class="vcenter-right"  onclick="javascript:window.location.href='';" style="width:120px;height:45px;position:absolute;right:0px">
+            <font class="btn" style= " background: linear-gradient(90deg, #07B8A4 1.38%, #0EC77B 100%); margin-right:10px;color:#eeeeee;font-size:13px;padding-left:5px;padding-right:5px;height:30px;border-radius:5px;padding-top:4px">Online Service</font>
+        </div>
+        <div onclick="javascript:window.location.href='my.html';" class="vcenter" style="width:80%;height:25px;">
+            <img src="assets/images/rr_3_lv.png" width="25px" height="25px" style="position:absolute;left:10px">
+             <p style="font-size:20px;background: linear-gradient(90deg, #07B8A4 1.38%, #0EC77B 100%);background-clip: text;color: transparent;-webkit-background-clip: text;font-weight:bold;transform: scale(.9)">Rules Description</p> 
+        </div>
+</div>
+<div class="vcenter" style="width:100%;margin-top:20px">
+    <div style="width:90%;color: black;">
+        <br />
+        <br />
+        <br />
+        <br />
+        <h3>What is a reverse transaction?</h3>
+        <br />
+        <br />
+        <p>A reverse trade is a reverse score. For example, if you invest in a game with a score of 0-0, as long as the final result of the two teams is not 0-0, you will win, and the platform will immediately settle the income. (For example, if the score is 1-0, 3-2, 1-3, the player wins)</p>
+        <br />
+        <br />
+        <br />
+        <h3>What is a game?</h3>
+        <br />
+        <br />
+        <p>A match is a straight score. For example, if you put in a 0-0 score in a game, you will only win if both teams end up 0-0. Higher profit, higher risk.</p>
+        <br />
+        <br />
+        <p> The platform is open for withdrawals 7*24 hours, supports major banks and USDT recharge, tens of millions of dollars in bonuses, players are welcome to participate in the experience.</p>
+        <br />
+        <br />
+    </div> 
+</div>
+<!-- 底部 -->
+<script>
+      $('#lvSelect').change(function(){
+        
+        window.location.href='/index/user/tjinfo3.html'+'?lv='+$('#lvSelect').val();
+
+    })
+</script>
+</body>
+
+</html>

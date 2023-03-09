@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Home</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    
+    <style>
+        .vcenter {
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .vcenter-left {
+            display: flex;
+            align-items: center;
+            justify-content: left
+        }
+
+        .vcenter-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end
+        }
+
+        .vcenter-bottom {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .vcenter-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .vcenter-top-left {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .vcenter-top-right {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+
+        .vcenter-bottom-left {
+            display: flex;
+            align-items: flex-end;
+            justify-content: left;
+        }
+
+        .vcenter-bottom-right {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        .my-modal-wrap {
+            position: fixed;
+            overflow: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            z-index: 999;
+            -webkit-overflow-scrolling: touch;
+            outline: 0;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        .my-modal-content {
+            background-color: initial;
+            overflow: auto;
+            position: relative;
+            border: 0;
+            background-clip: padding-box;
+            text-align: center;
+            height: 100%;
+        }
+
+        .my-modal-body {
+            font-size: .3rem;
+            color: #6c7ba8;
+            height: 100%;
+            line-height: 1.5;
+            overflow: auto;
+        }
+
+        .TimeLimitedModal_container__3Awlm {
+            border-radius: 24px;
+            width: 310px;
+            height: 410px;
+            background-color: #07B8A4;
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at {
+            height: calc(100% - 42px);
+            display: -webkit-flex;
+            display: flex;
+            -webkit-justify-content: flex-end;
+            justify-content: flex-end;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            padding-bottom: 24px;
+            background-color: #f1f4f8;
+            border-radius: 0 0 24px 24px;
+        }
+
+        .TimeLimitedModal_modal__3Mp-L .TimeLimitedModal_container__3Awlm .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_tabs__3xlLr {
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        .TimeLimitedModal_inner__uxOPj {
+            position: relative;
+            height: 100%;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+            /* background: url(/_next/static/chunks/images/bg_poptabsel_letf-6d70043….png) no-repeat 0 0/6.2rem 1.32rem,url(/_next/static/chunks/images/bg_poptabsel_middle-b2397ad….png) no-repeat 0 1.3rem/6.2rem 8.56rem; */
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_tabs__3xlLr .TimeLimitedModal_tabItem__9TkFH {
+            -webkit-flex: 1 1;
+            flex: 1 1;
+            text-align: center;
+            line-height: 42px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: PingFang SC;
+            color: #fff;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE {
+            height: 100%;
+            padding: 24px 24px 0;
+            box-sizing: border-box;
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX {
+            height: calc(100% - 60px);
+            overflow-y: scroll;
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX .TimeLimitedModal_list__1Q8Md .TimeLimitedModal_item__1tef9 {
+            text-align: left;
+            color: #6c7ba8;
+            font-family: PingFang SC;
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX .TimeLimitedModal_list__1Q8Md .TimeLimitedModal_item__1tef9 .TimeLimitedModal_title__LXjmZ {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 40px;
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX .TimeLimitedModal_list__1Q8Md .TimeLimitedModal_item__1tef9 .TimeLimitedModal_content__2CjhE {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_btn__4qjsT {
+            line-height: 40px;
+            height: 40px;
+            width: 262px;
+            text-align: center;
+            font-family: PingFang SC;
+            font-weight: 500;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 20px;
+            margin: 20px auto 0;
+            background: -webkit-linear-gradient(top, #97ccff, #07B8A4);
+            background: linear-gradient(180deg, #97ccff, #07B8A4);
+            box-shadow: 0 2px 4px rgba(93, 167, 235, .8);
+        }
+
+        .TimeLimitedModal_checkWrapper__3mR_c {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            padding-top: .4rem;
+        }
+
+        .TimeLimitedModal_checkWrapper__3mR_c i {
+            width: 14px;
+            height: 14px;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIVBMVEVMaXH///////////////////////////////////////8c1D1MAAAACnRSTlMAIEBBj5Cvvu7vLtBcNAAAAElJREFUeNpjYKxcBQfLBBgkVyGBRoasVUhgOcOqpUpwELWCYdUiBjiwWjXKxcedtcQYBJRAwGsVQ9UqJLCMQQI12BmzVsHBdAEA0SlmDw9W4MoAAAAASUVORK5CYII=);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .TimeLimitedModal_checkWrapper__3mR_c i.TimeLimitedModal_checked__3t0yr {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP1BMVEVMaXE/d/dAdflAdPlBdflBdvn////+///z9/7J2P64zP23zP2sw/2gu/2UsvyIqfx8oPxlkPpkkPpYh/tBdvo7SxPoAAAABnRSTlMAIK++7/72TMLkAAAAhElEQVR42qXSQRKCMAxA0aQtAVSwQu5/Vh1l+kewXcjftS+7RERjcqKgIgrtSirBq0XxeqmF3R+4NnCyK3gwsxk8WJ9/491eTQ4ueW/gMmxPDBzLR94MZPwxYG9Ei4HoDftCn+3TBQN9MgwsioFoPzZWtp5eNphaGOsY2kctGjpyKKo8Aep5NLNjZ5vuAAAAAElFTkSuQmCC);
+        }
+
+        .TimeLimitedModal_checkWrapper__3mR_c span {
+            margin-left: 8px;
+            font-family: PingFang SC;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class=""  style="background-color:#fff;padding-top:0px">
+<script>
+    $( document ).ready(function() {
+        jQuery('#tabss-2').attr('checked',true)
+    });
+
+</script>
+
+
+<!-- 头部 -->
+<div class="vcenter" style="width:100%;margin-top:10px;">
+        <div class="vcenter-right"  onclick="javascript:window.location.href='https://lp.gkkvip.cc/yubo/';" style="width:120px;height:45px;position:absolute;right:0px">
+            <font class="btn" style="margin-right:10px;color:#eeeeee;font-size:13px;padding-left:5px;padding-right:5px;height:30px;border-radius:5px;padding-top:4px ; background: linear-gradient(90deg, #07B8A4 1.38%, #0EC77B 100%);">Online Service</font>
+        </div>
+        <div onclick="javascript:window.location.href='my.html';" class="vcenter" style="width:80%;height:25px;">
+            <img src="assets/images/rr_3_lv.png" width="25px" height="25px" style="position:absolute;left:10px">
+             <p style="font-size:20px;background: linear-gradient(90deg, #07B8A4 1.38%, #0EC77B 100%);background-clip: text;color: transparent;-webkit-background-clip: text;font-weight:bold;transform: scale(.9)">Withdraw</p> 
+        </div>
+</div>
+
+
+
+
+
+
+<!-- 头部 -->
+<!-- 引入共用左边导航栏 -->
+
+<!--左边列表-->
+
+<script src="/static/tg60/chinese.js"></script>
+<style>
+    @media screen and (max-width: 680px){
+
+        #daohanglkan{
+            overflow: auto;height: 474PX;
+
+        }
+    }
+
+</style>
+<!-- snav -->
+  <div class="snav">
+    <div class="mask"></div>
+    <div class="con">
+        <div class="snav-logo">
+            <img src="/static/tg60/images/logo400_lv_2.png" style="width:100px;height:auto"  alt="">
+
+        </div>
+        <div class="top">
+          <!--  <a href="/index/user/virtual_pay.html" class="item">
+                <i style="background-image: url(/static/tg60/images/h-3.png)"></i>
+                <span>充值</span>
+            </a>
+            <a href="/index/user/tixian.html" class="item">
+                <i style="background-image: url(/static/tg60/images/h-2.png)"></i>
+                <span>提款</span>
+            </a>
+            <a href="/index/user/payment.html" class="item">
+                <i style="background-image: url(/static/tg60/images/h-1.png)"></i>
+                <span>转账</span>
+            </a>--->
+        </div>
+        
+        
+        <ul class="nav" id="daohanglkan">
+            <li>
+                <div class="vcenter-left" style="width:80%;height:40px;">
+                    <img src="/static/tg60/images/Vector_lv.png" width="15px" height="15px">
+        
+                    <select  id="chind" style="width:80px;height:20px;margin-left:17px;color:#6d81a4;border:0px;background:url('/static/tg60/images/rr_1_lv.png') right no-repeat;background-size:14px;font-size:14px;background-color:#fff;">
+                        <option>Language</option>
+                        <option value='en'>English</option>
+                        <option value="vi">Việt nam</option>
+                        <!--<option value="cntw">繁体中文</option>-->
+                        <option value="cn">简体中文</option>
+                        <option value='en'>বাংলা</option>
+                        <option value='en'>भारत</option>
+                        <option value='en'>ไทย</option>
+                        <option value='en'>日本</option>
+                        <option value='en'>Indonesia</option>
+                    </select>
+                </div>
+        
+
+
+            </li>
+
+            <li>
+                <a href="/index/saishi/jieguo.html" class="v1">
+                    <i style="background-image: url(/static/tg60/images/c_n4.png)"></i>
+                    <span style="color:#6d81a4">Sports results</span>
+                </a>
+            </li>
+            <li>
+                <a href="/index/user/tuijian.html" class="v1">
+                    <i style="background-image: url(/static/tg60/images/c_n1.png)"></i>
+                    <span style="color:#6d81a4">My team</span>
+                </a>
+            </li>
+            <li>
+                <a href="/index/user/account2.html" class="v1">
+                    <i style="background-image: url(/static/tg60/images/c_n2.png)"></i>
+                    <span style="color:#6d81a4">MoneyLog</span>
+                </a>
+            </li>
+            <li>
+                <a href="/index/user/xiazhutongji.html" class="v1">
+                    <i style="background-image: url(/static/tg60/images/c_n5.png)"></i>
+                    <span style="color:#6d81a4">Accounting</span>
+                </a>
+            </li>
+            <li>
+                <a href="/index/user/fanyong.html" class="v1">
+                    <i style="background-image: url(/static/tg60/images/c_n3.png)"></i>
+                    <span style="color:#6d81a4">Commission</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/index/news/index.html" class="v1">
+                    <i style="background-image: url(/static/tg60/images/c_n6.png)"></i>
+                    <span style="color:#6d81a4">Communique</span>
+                </a>
+            </li>
+    
+
+            <li>
+                <a href="#" onclick="loginOut()" class="v1">
+                    <i style="background-image: url(/static/tg60/images/c_n7.png)"></i>
+                    <span style="color:#6d81a4">Safety exit</span>
+                </a>
+            </li>
+            <li><a href="" class="v1">&nbsp;</a></li>
+            
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" charset="utf-8">
+    //语言
+    $('#chind').change(function(){
+        var data={'lang':$('#chind').val()}
+        $.get("/index/login/lang.html",data,function(){
+            location.reload();
+        })
+    })
+    var isPost=true;
+    function loginOut(){
+              if(isPost){
+                    isPost=false;
+                    $.post("/index/login/out.html",{},function(data){
+                       window.location.href=data.url;
+                    });
+                }
+    }
+</script>
+<!-- banner -->
+
+
+
+
+
+
+
+
+<div class="vcenter" style="width:100%;margin-top:20px">
+    <div class="bg_"  style="width:90%;min-height:600px;">
+         <form name="form1" method="post" action="/index/user/tixian.html" id="form1" onsubmit="return bank($(this))">
+                        <input name="url" value="/index/user/tixian.html" type="hidden">
+         <div class="vcenter" style="width:100%;">
+            <div class="vcenter" style="width:90%;height:50px;border-bottom:1px solid #aaaaaa;margin-top:5px">
+                <font style="color:#6d81a4;font-size:16px">Balance：
+                 11                BDT</font>
+            </div>
+            
+        </div>
+        <div class="vcenter" style="width:100%;">
+           <div class="vcenter-left" style="width:90%;height:40px;border-bottom:1px solid #aaaaaa;margin-top:0px">
+                <font style="color:#6d81a4;font-size:12px">Standard：</font>
+                <font style="color:#6d81a4;font-size:12px"><em class="g-c-o">The first store0                BDT</em><em class="g-c-o">--Reach the standard0                BDT</em></font>
+            </div>
+        </div>
+
+        <div class="vcenter" style="width:100%;">
+           <div class="vcenter-left" style="width:90%;height:40px;border-bottom:1px solid #aaaaaa;margin-top:0px">
+                <font style="color:#6d81a4;font-size:12px">Withdraw：</font>
+                                        <font style="color:#6d81a4;font-size:12px"><em class="g-c-o">May</em></font>
+                          
+                
+            </div>
+        </div>
+                <div class="vcenter" style="width:100%;">
+           <div class="vcenter-left" style="width:90%;height:40px;border-bottom:1px solid #aaaaaa;margin-top:0px">
+                <font style="color:#6d81a4;font-size:12px">Payment methods：</font>
+                <font style="color:#6d81a4;font-size:12px"><em class="g-c-o">The first store0BDT</em><em class="g-c-o">--Reach the standard0BDT</em></font>
+            </div>
+        </div>
+        <div class="vcenter" style="width:100%;">
+           <div class="vcenter-left" style="width:90%;height:40px;border-bottom:1px solid #aaaaaa;margin-top:0px">
+                <font style="color:#6d81a4;font-size:12px">Payment nickname：</font>
+                <font style="color:#6d81a4;font-size:12px"><em class="g-c-o">Sayesta</em></font>
+            </div>
+        </div>
+        <div class="vcenter" style="width:100%;">
+           <div class="vcenter-left" style="width:90%;height:40px;border-bottom:1px solid #aaaaaa;margin-top:0px">
+                <font style="color:#6d81a4;font-size:12px">Payment account：</font>
+                <font style="color:#6d81a4;font-size:12px"><em class="g-c-o">01712860941</em></font>
+            </div>
+        </div>
+        <div class="vcenter" style="width:100%;">
+           <div class="vcenter-left" style="width:90%;height:40px;border-bottom:1px solid #aaaaaa;margin-top:0px">
+                <font style="color:#6d81a4;font-size:12px">Poundage：</font>
+                <font  id="tishi" style="color:#6d81a4;font-size:12px"></font>
+            </div>
+        </div>
+        <div class="vcenter" style="width:100%;">
+           <div class="vcenter-left" style="width:90%;height:40px;border-bottom:1px solid #aaaaaa;margin-top:0px">
+                <font style="color:#6d81a4;font-size:12px">Amount：</font>
+                <input type="text"  id="money" style="width:220px;border:0px;background:rgba(0,0,0,0);color:#6d81a4" autocomplete="off" placeholder="Please enter 260-200,000" name="price"  onchange="shiji($(this))"  onkeyup="shouxu()"oninput = "value=value.replace(/[^\d]/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')"><em class="g-c-o" >*</em>
+            </div>
+        </div>
+        <div class="vcenter" style="width:100%;">
+           <div class="vcenter-left" style="width:90%;height:40px;border-bottom:1px solid #aaaaaa;margin-top:0px">
+                <font style="color:#6d81a4;font-size:12px">Trade password：</font>
+                <input type="password" style="width:220px;border:0px;background:rgba(0,0,0,0);color:#6d81a4"  id="" name="password" placeholder="Please enter your password"><em class="g-c-o">*</em>
+            </div>
+        </div>
+                <div class="vcenter" style="width:100%;">
+           <div class="vcenter" style="width:90%;height:40px;margin-top:5px">
+               <div  onclick="payQRCodeStep1to2()" class="vcenter btn" style="width:80%;height:40px;">
+                    <font style="color:#fff;font-size:16px">Submit</font> 
+                    <input type="submit"  id="p1" value="" style="width:100%;height:50px;position:absolute;background:rgba(0,0,0,0);border:0px" /> 
+                </div>
+            </div>
+        </div>
+                <div class="vcenter" style="width:100%;">
+           <div class="vcenter-left" style="width:90%;margin-top:10px">
+                 <div class="m-txt-s1">
+                    <h3 class="g-tit-s1">※&nbsp;Notes&nbsp;※</h3>
+                    <ul class="ul-txt-s1 d1">
+                        <li>
+                            <span>1</span>
+                            <p>Withdrawals have been made this week 0 </p>
+                        </li>
+                        <li>
+                            <span>2</span>
+                            <p>Free withdrawal this week0---This week's free withdrawal surplus0</p>
+                        </li>
+                        <li>
+                            <span>3</span>
+                            <p>Weekly withdrawals exceed0，Charge service fee5%</p>
+                        </li>
+                        <!--<li>-->
+                        <!--    <span>4</span>-->
+                        <!--    <p>Withdrawal hours are 9 am to 9 pm</p>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+       
+</div>     
+<!-- 内容 -->
+<!-- 内容 -->
+
+<!-- 底部 -->
+<div class="footer">
+    <div class="h55"></div>
+    <ul class="ul-tabbar">
+        <li class="on">
+            <a href="index.html">
+                <i class="i1"></i>
+                <span class="txt">Home</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="transaction.html">
+                <i class="i2"></i>
+                <span class="txt">Transaction</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="my-team.html">
+                <i class="i3"></i>
+                <span class="txt">My team</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="my.html">
+                <i class="i5"></i>
+                <span class="txt">My</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- 底部 -->
+
+<script>
+
+    function shiji(price){
+
+        $('#shiji').html(price.val()*(100-5)/100)
+    }
+    function bank(form){
+        url=$('input[name="url"]').val()
+        if($('input[name="price"]').val()==''){
+            layer.msg("Please enter the withdrawal amount");
+            return false
+        }
+        if($('input[name="price"]').val()>10.51){
+            layer.msg("Lack of balance");
+            return false
+        }
+
+        if($('input[name="bypass"]').val()==''){
+            layer.msg("Please enter your trade password");
+            return false
+        }
+        if(0>=10){
+            layer.msg("The number of withdrawals today has reached the maximum");
+            return false
+        }
+
+        adNO("p1")
+        $.post(url,form.serialize(),function(data){
+            data=eval("("+data+")");
+            if(data.state == 0){
+                reNO("p1")
+                layer.msg(data.msg);
+            }else{
+
+                layer.msg(data.msg,function(){
+                    window.location="/index/user/account2.html"
+                });
+            }
+        });
+        return false
+    }
+
+</script>
+<script src="assets/js/jquery.countup.min.js"></script>
+<script src="assets/js//jquery.waypoints.min.js"></script>
+<script src="assets/js//lib.js "></script>
+<script src="assets/js//query.js"></script>
+<script src="assets/js/chinese.js"></script>
+
+<!--//计算手续费-->
+
+<script>
+    function shouxu() {
+        var money = document.getElementById("money").value;
+        var shouxu1=money*(100-5)/100;
+
+
+
+        if(0!=0){
+            document.getElementById("tishi").innerHTML='free';
+        }else{
+            document.getElementById("tishi").innerHTML=money+'-Poundage'+"5"+'%'+'=after-tax'+shouxu1+'BDT';
+        }
+
+
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+    $('.js-cp-s1').click(function(event) {
+        $(this).siblings('input').select();
+        document.execCommand('Copy');
+    });
+</script>
+</body>
+
+</html>
+
+
+

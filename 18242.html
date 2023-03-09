@@ -1,0 +1,835 @@
+ <!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+        <meta name="renderer" content="webkit" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>Home</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <style>
+            .vcenter {
+                display: flex;
+                align-items: center;
+                justify-content: center
+            }
+    
+            .vcenter-left {
+                display: flex;
+                align-items: center;
+                justify-content: left
+            }
+    
+            .vcenter-right {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end
+            }
+    
+            .vcenter-bottom {
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+            }
+    
+            .vcenter-top {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+            }
+    
+            .vcenter-top-left {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+    
+            .vcenter-top-right {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-end;
+            }
+    
+            .vcenter-bottom-left {
+                display: flex;
+                align-items: flex-end;
+                justify-content: left;
+            }
+    
+            .vcenter-bottom-right {
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+            }
+    
+            .my-modal-wrap {
+                position: fixed;
+                overflow: auto;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                height: 100%;
+                z-index: 999;
+                -webkit-overflow-scrolling: touch;
+                outline: 0;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+            }
+    
+            .my-modal-content {
+                background-color: initial;
+                overflow: auto;
+                position: relative;
+                border: 0;
+                background-clip: padding-box;
+                text-align: center;
+                height: 100%;
+            }
+    
+            .my-modal-body {
+                font-size: .3rem;
+                color: #6c7ba8;
+                height: 100%;
+                line-height: 1.5;
+                overflow: auto;
+            }
+    
+            .TimeLimitedModal_container__3Awlm {
+                border-radius: 24px;
+                width: 310px;
+                height: 410px;
+                background-color: #07B8A4;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at {
+                height: calc(100% - 42px);
+                display: -webkit-flex;
+                display: flex;
+                -webkit-justify-content: flex-end;
+                justify-content: flex-end;
+                -webkit-flex-direction: column;
+                flex-direction: column;
+                padding-bottom: 24px;
+                background-color: #f1f4f8;
+                border-radius: 0 0 24px 24px;
+            }
+    
+            .TimeLimitedModal_modal__3Mp-L .TimeLimitedModal_container__3Awlm .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_tabs__3xlLr {
+                display: -webkit-flex;
+                display: flex;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj {
+                position: relative;
+                height: 100%;
+                -webkit-transition: all .2s;
+                transition: all .2s;
+                /* background: url(/_next/static/chunks/images/bg_poptabsel_letf-6d70043….png) no-repeat 0 0/6.2rem 1.32rem,url(/_next/static/chunks/images/bg_poptabsel_middle-b2397ad….png) no-repeat 0 1.3rem/6.2rem 8.56rem; */
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_tabs__3xlLr .TimeLimitedModal_tabItem__9TkFH {
+                -webkit-flex: 1 1;
+                flex: 1 1;
+                text-align: center;
+                line-height: 42px;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: PingFang SC;
+                color: #fff;
+                -webkit-transition: all .2s;
+                transition: all .2s;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE {
+                height: 100%;
+                padding: 24px 24px 0;
+                box-sizing: border-box;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX {
+                height: calc(100% - 60px);
+                overflow-y: scroll;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX .TimeLimitedModal_list__1Q8Md .TimeLimitedModal_item__1tef9 {
+                text-align: left;
+                color: #6c7ba8;
+                font-family: PingFang SC;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX .TimeLimitedModal_list__1Q8Md .TimeLimitedModal_item__1tef9 .TimeLimitedModal_title__LXjmZ {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 40px;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_notice__2t9iE .TimeLimitedModal_scroll__3ADOX .TimeLimitedModal_list__1Q8Md .TimeLimitedModal_item__1tef9 .TimeLimitedModal_content__2CjhE {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+            }
+    
+            .TimeLimitedModal_inner__uxOPj .TimeLimitedModal_body__29-at .TimeLimitedModal_btn__4qjsT {
+                line-height: 40px;
+                height: 40px;
+                width: 262px;
+                text-align: center;
+                font-family: PingFang SC;
+                font-weight: 500;
+                font-size: 16px;
+                color: #fff;
+                border-radius: 20px;
+                margin: 20px auto 0;
+                background: -webkit-linear-gradient(top, #97ccff, #07B8A4);
+                background: linear-gradient(180deg, #97ccff, #07B8A4);
+                box-shadow: 0 2px 4px rgba(93, 167, 235, .8);
+            }
+    
+            .TimeLimitedModal_checkWrapper__3mR_c {
+                display: -webkit-flex;
+                display: flex;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                padding-top: .4rem;
+            }
+    
+            .TimeLimitedModal_checkWrapper__3mR_c i {
+                width: 14px;
+                height: 14px;
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIVBMVEVMaXH///////////////////////////////////////8c1D1MAAAACnRSTlMAIEBBj5Cvvu7vLtBcNAAAAElJREFUeNpjYKxcBQfLBBgkVyGBRoasVUhgOcOqpUpwELWCYdUiBjiwWjXKxcedtcQYBJRAwGsVQ9UqJLCMQQI12BmzVsHBdAEA0SlmDw9W4MoAAAAASUVORK5CYII=);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+    
+            .TimeLimitedModal_checkWrapper__3mR_c i.TimeLimitedModal_checked__3t0yr {
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP1BMVEVMaXE/d/dAdflAdPlBdflBdvn////+///z9/7J2P64zP23zP2sw/2gu/2UsvyIqfx8oPxlkPpkkPpYh/tBdvo7SxPoAAAABnRSTlMAIK++7/72TMLkAAAAhElEQVR42qXSQRKCMAxA0aQtAVSwQu5/Vh1l+kewXcjftS+7RERjcqKgIgrtSirBq0XxeqmF3R+4NnCyK3gwsxk8WJ9/491eTQ4ueW/gMmxPDBzLR94MZPwxYG9Ei4HoDftCn+3TBQN9MgwsioFoPzZWtp5eNphaGOsY2kctGjpyKKo8Aep5NLNjZ5vuAAAAAElFTkSuQmCC);
+            }
+    
+            .TimeLimitedModal_checkWrapper__3mR_c span {
+                margin-left: 8px;
+                font-family: PingFang SC;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                color: #fff;
+            }
+        </style>
+    </head>
+<body class=""  style="background-color:#fff;padding-top:0px">
+<!-- 头部 -->
+<input type="hidden" id="cId" value="18242">
+<input type="hidden" id="ctype_" value="2">
+<div class="vcenter" style="width:100%;margin-top:10px;">
+     <div class="vcenter-right"  onclick="javascript:window.location.href='/index/user/rule.html';" style="width:120px;height:45px;position:absolute;right:0px">
+            <font class="btn_" style="margin-right:10px;color:#eeeeee;font-size:13px;padding-left:5px;padding-right:5px;height:30px;border-radius:5px;padding-top:4px;white-space: nowrap;">Rules Description</font>
+        </div>
+        <div onclick="javascript:window.location.href='/index/saishi/index';" class="vcenter" style="width:80%;height:25px;">
+         
+            <img src="/static/tg60/images/rr_3_lv.png" width="25px" height="25px" style="position:absolute;left:10px">
+             <p style="font-size:20px;background: linear-gradient(90deg, #07B8A4 1.38%, #0EC77B 100%);background-clip: text;color: transparent;-webkit-background-clip: text;font-weight:bold;transform: scale(.9)">Investment details</p> 
+        </div>
+</div>
+<!-- 头部 -->
+<!-- 内容 -->
+
+<form action="">
+<div class="vcenter" style="width:100%;margin-top:20px;">
+    <div class="vcenter" style="width:90%;">
+    
+        
+         <div class="btn_" style="width:100%;height:140px;border-radius:15px">
+                                                           <div style="width:27px;height26px;position:absolute;">
+                                 <img src="/static/tg60/images/a_15.png" alt="" style="width:27px;height:26px">
+                              </div>
+                                                                
+                                <div style="width:100%;height:80px;display:flex;align-items:center;justify-content:center;">
+                                   <div style="width:42%;height:100%;">
+                                       <div style="width:100%;height:55px;display:flex;align-items:flex-end;justify-content:center;">
+                                           <div style="width:50px;height:50px;">
+                                               <img src="/static/tg60/images/uu_3.png" alt="" style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                           </div>
+                                       </div>
+                                       <div style="width:100%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                            <font style="color:#eeeeee;font-size:13px;margin-left:5px">AEK LARNACA </font>
+                                       </div>
+                                   
+                                   </div>
+                                   <div style="width:16%;height:100%;display:flex;align-items:center;justify-content:center;">
+                                       <img src="/static/tg60/images/vs_bai.png" alt="" style="width:30px;height:20px;margin-top:15px">
+                                   </div>
+                                   <div style="width:42%;height:100%;">
+                                       <div style="width:100%;height:55px;display:flex;align-items:flex-end;justify-content:center;">
+                                           <div style="width:50px;height:50px;">
+                                               <img src="/static/tg60/images/uu_2.png" alt="" style="margin-top:10px;width:50px;height:50px;border-radius:50%;border:2px solid #343443">
+                                           </div>
+                                       </div>
+                                       <div style="width:98%;height:20px;text-align:center;overflow:hidden;white-space:nowrap;line-height:25px;margin-top:10px">
+                                            <font style="color:#eeeeee;font-size:13px;"> WEST HAM UNITED</font>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div style="width:100%;height:39px;display:flex;align-items:flex-start;justify-content:flex-start">
+                                   <div style="width:33%;height:100%;  display:flex;align-items:center;justify-content:left;">
+                                       <img src="/static/tg60/images/uu_1_bai.png" alt="" style="margin-left:10px;width:16px;height:16px;">
+                                       <font style="margin-left:5px;font-size:12px;color:#dddddd;">03-09 23:45</font>
+                                   </div>
+                                   <div style="width:64%;height:100%;text-align:right;overflow:hidden;white-space:nowrap;line-height:39px">
+                                       <font style="width:100%;font-size:12px;color:#dddddd;transform: scale(.8);margin-right:10px">UEFA ECL</font>
+                                   </div>
+                               </div>
+                                    <div class="vcenter" style="width:100%;height:10px;">
+                                         <img src="/static/tg60/images/xx_12.png" alt="" style="width:90%;height:5px;">
+                                   </div>
+		
+                       </div> 
+                       
+                       
+                       
+    
+        <!--<div  style="width:100%;height:130px;background:url('/static/tg60/images/cc_j2.png') no-repeat; background-size:100% 100%">-->
+                                  
+        <!--        <div style="width:100%;height:70px;display:flex;align-items:center;justify-content:center;">-->
+        <!--           <div style="width:42%;height:100%;">-->
+        <!--               <div style="width:100%;height:45px;display:flex;align-items:flex-end;justify-content:center;">-->
+        <!--                   <div style="width:28px;height:28px;">-->
+        <!--                       <img src="/static/tg60/images/ssai1.png" alt="" style="width:26px;height:26px;border-radius:50%;border:2px solid #343443">-->
+        <!--                   </div>-->
+        <!--               </div>-->
+        <!--               <div style="width:100%;height:25px;display:flex;align-items:flex-start;justify-content:center;">-->
+        <!--                   <font style="color:#eeeeee;font-size:15px">AEK LARNACA </font>-->
+        <!--               </div>-->
+        <!--           </div>-->
+        <!--           <div style="width:16%;height:100%;display:flex;align-items:center;justify-content:center;">-->
+        <!--               <img src="/static/tg60/images/vs.png" alt="" style="width:40px;height:30px;margin-top:15px">-->
+        <!--           </div>-->
+        <!--           <div style="width:42%;height:100%;">-->
+        <!--               <div style="width:100%;height:45px;display:flex;align-items:flex-end;justify-content:center;">-->
+        <!--                   <div style="width:28px;height:28px;">-->
+        <!--                       <img src="/static/tg60/images/ssai1.png" alt="" style="width:26px;height:26px;border-radius:50%;border:2px solid #343443">-->
+        <!--                   </div>-->
+        <!--               </div>-->
+        <!--               <div style="width:100%;height:25px;display:flex;align-items:flex-start;justify-content:center;">-->
+        <!--                   <font style="color:#eeeeee;font-size:15px"> WEST HAM UNITED</font>-->
+        <!--               </div>-->
+        <!--           </div>-->
+        <!--       </div>-->
+        <!--       <div style="width:100%;height:39px;display:flex;align-items:flex-start;justify-content:flex-start">-->
+        <!--           <div style="width:37%;height:100%;  display:flex;align-items:center;justify-content:left;">-->
+        <!--               <font style="margin-left:10px;font-size:12px;color:#aaaaaa;transform: scale(.8);">2023-03-09 23:45:00</font>-->
+        <!--           </div>-->
+        <!--           <div style="width:30%;height:100%;  display:flex;align-items:center;justify-content:center;">-->
+                      
+        <!--           </div>-->
+        <!--           <div style="width:33%;height:100%;  display:flex;align-items:center;justify-content:flex-end;">-->
+        <!--               <font style="font-size:12px;color:#aaaaaa;transform: scale(.8);margin-right:10px">UEFA ECL</font>-->
+        <!--           </div>-->
+        <!--       </div>-->
+        <!--       <div class="vcenter" style="width:100%;height:10px;">-->
+        <!--             <img src="/static/tg60/images/xx_12.png" alt="" style="width:90%;height:5px;">-->
+        <!--       </div>-->
+        
+        <!--</div> -->
+    </div>
+</div>
+
+<div class="vcenter" style="width:100%;margin-top:15px">
+    <div class="vcenter-left" style="width:90%;">
+        
+        <font style="color:#6d81a4;font-size:14px">Now ：</font>
+        <select  id="zfs" style="min-width:60px;height:20px;margin-left:5px;color:#6d81a4;border:0px;font-size:14px;background-color:#fff;">
+            <option value="2">Inverse score</option>
+            <option value="1">Positive score</option>
+            
+        </select>
+        <div style="background:url('/static/tg60/images/rr_1_lv.png') left no-repeat;background-size:18px;width:20px;height:20px">
+            
+        </div>
+    </div>  
+</div>
+<div class="vcenter" style="width:100%;margin-top:0px">
+    <div style="width:90%;min-height:450px;">
+        <div class="vcenter" style="width:100%;height:70px">
+             <div style="width:90%;margin-left:10px">
+                 <ul class=" TAB_CLICK ul_tab_l1 s1" id=".tab-hs" style="display:flex;align-items:center;justify-content:center;height:50px;margin-top:10px">
+                    <li class="on" style="width:50%;display:flex;align-items:center;justify-content:center">
+                        <a onclick="setDiv(1)" href="javascript:;font-size:12px">
+                            Full time                        </a>
+                    </li>
+                    <li style="width:50%;display:flex;align-items:center;justify-content:center">
+                        <a onclick="setDiv(2)" href="javascript:;font-size:12px">
+                            First half                        </a>
+                    </li>
+                    <!--<li style="width:33%;display:flex;align-items:center;justify-content:center">-->
+                    <!--    <a onclick="setDiv(3)" href="javascript:;">-->
+                    <!--        The total score-->
+                    <!--    </a>-->
+                    <!--</li>-->
+              </ul>
+            </div>
+        </div>
+         <div class="vcenter" style="width:100%;margin-top:0px">
+             <div class="vcenter-left"  style="width:90%;height:30px;overflow:hidden;overflow-y: scroll;">
+                     
+                    <span style="font-size:13px;color:#999999">Volume:</span>
+                    <font style="font-size:13px;color:#07b9a3">&nbsp;
+                    141,277,040BDT                    </font>
+             </div>
+        </div>
+         <div class="vcenter" id="div_1" style="width:100%;">
+             <div  style="width:90%;height:340px;overflow:hidden;overflow-y: scroll;">
+                <div class="vcenter" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:13px">Options</font>
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:13px;"></font>
+                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:13px;margin-right:5px">Profit</font>
+                    </div>
+                </div>
+                
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004397,2)" id="tiaozi1004397" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">0-0</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">2.99%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004398,2)" id="tiaozi1004398" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">0-1</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">1.94%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004399,2)" id="tiaozi1004399" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">0-2</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">0.88%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004400,2)" id="tiaozi1004400" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">0-3</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">1.89%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004401,2)" id="tiaozi1004401" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">1-1</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">2.89%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004402,2)" id="tiaozi1004402" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">1-2</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">2.17%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004403,2)" id="tiaozi1004403" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">1-3</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">0.71%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004404,2)" id="tiaozi1004404" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">1-0</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">3.88%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004405,2)" id="tiaozi1004405" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">2-0</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">2.52%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004406,2)" id="tiaozi1004406" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">2-1</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">2.38%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004407,2)" id="tiaozi1004407" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">2-2</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">2.36%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004408,2)" id="tiaozi1004408" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">2-3</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">0.89%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004409,2)" id="tiaozi1004409" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">3-0</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">1.25%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004410,2)" id="tiaozi1004410" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">3-1</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">0.98%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004411,2)" id="tiaozi1004411" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">3-2</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">0.91%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004412,2)" id="tiaozi1004412" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">3-3</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">0.89%</font>
+                    </div>
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004413,2)" id="tiaozi1004413" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">4-4</font>
+    				
+                    </div>
+                    <div class="vcenter" style="width:33%;height:100%">
+                        	            				        <!--<font style="color:#f14141;font-size:13px;">Guaranteed to win</font>-->
+            				        <img src="/static/tg60/images/jjj_1.png" alt="" style="width:90px;height:auto;">
+            				                    </div>
+                    <div class="vcenter-right" style="width:33%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">0.75%</font>
+                    </div>
+                    
+                </div>
+
+                                
+                
+                
+             </div>
+         </div>
+
+        <div class="vcenter" id="div_2" style="width:100%;display:none">
+             <div  style="width:90%;height:340px;overflow:hidden;overflow-y: scroll;">
+                <div class="vcenter" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:13px">Options</font>
+                    </div>
+                    <div class="vcenter-right" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:13px;margin-right:5px">Profit</font>
+                    </div>
+                    <!--<div class="vcenter-right" style="width:33%;height:100%">-->
+                    <!--    <font style="color:#cccccc;font-size:13px">Can be traded</font>-->
+                    <!--</div>-->
+                </div>
+                
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004414,2)" id="tiaozi1004414" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">2-1</font>
+                    </div>
+                    <div class="vcenter-right" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">1.71%</font>
+                    </div>
+                    <!--<div class="vcenter-right" style="width:40%;height:100%">-->
+                    <!--    <font style="color:#cccccc;font-size:10px">10000000000</font>-->
+                    <!--</div>-->
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004415,2)" id="tiaozi1004415" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">2-0</font>
+                    </div>
+                    <div class="vcenter-right" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">2.66%</font>
+                    </div>
+                    <!--<div class="vcenter-right" style="width:40%;height:100%">-->
+                    <!--    <font style="color:#cccccc;font-size:10px">10000000000</font>-->
+                    <!--</div>-->
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004416,2)" id="tiaozi1004416" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">1-2</font>
+                    </div>
+                    <div class="vcenter-right" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">0.92%</font>
+                    </div>
+                    <!--<div class="vcenter-right" style="width:40%;height:100%">-->
+                    <!--    <font style="color:#cccccc;font-size:10px">10000000000</font>-->
+                    <!--</div>-->
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004417,2)" id="tiaozi1004417" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">1-1</font>
+                    </div>
+                    <div class="vcenter-right" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">5.98%</font>
+                    </div>
+                    <!--<div class="vcenter-right" style="width:40%;height:100%">-->
+                    <!--    <font style="color:#cccccc;font-size:10px">10000000000</font>-->
+                    <!--</div>-->
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004418,2)" id="tiaozi1004418" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">1-0</font>
+                    </div>
+                    <div class="vcenter-right" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">10.55%</font>
+                    </div>
+                    <!--<div class="vcenter-right" style="width:40%;height:100%">-->
+                    <!--    <font style="color:#cccccc;font-size:10px">10000000000</font>-->
+                    <!--</div>-->
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004419,2)" id="tiaozi1004419" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">0-2</font>
+                    </div>
+                    <div class="vcenter-right" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">0.69%</font>
+                    </div>
+                    <!--<div class="vcenter-right" style="width:40%;height:100%">-->
+                    <!--    <font style="color:#cccccc;font-size:10px">10000000000</font>-->
+                    <!--</div>-->
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004420,2)" id="tiaozi1004420" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">0-1</font>
+                    </div>
+                    <div class="vcenter-right" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">7.25%</font>
+                    </div>
+                    <!--<div class="vcenter-right" style="width:40%;height:100%">-->
+                    <!--    <font style="color:#cccccc;font-size:10px">10000000000</font>-->
+                    <!--</div>-->
+                    
+                </div>
+
+                                <div class="vcenter js-win1"  onclick="xiazhu(1004421,2)" id="tiaozi1004421" style="width:100%;height:40px;border-bottom:1px solid #cccccc">
+                    <div class="vcenter-left" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px">0-0</font>
+                    </div>
+                    <div class="vcenter-right" style="width:50%;height:100%">
+                        <font style="color:#6d81a4;font-size:10px;margin-right:5px">8.8%</font>
+                    </div>
+                    <!--<div class="vcenter-right" style="width:40%;height:100%">-->
+                    <!--    <font style="color:#cccccc;font-size:10px">10000000000</font>-->
+                    <!--</div>-->
+                    
+                </div>
+
+                                
+
+                
+                
+                
+             </div>
+         </div>
+         
+         
+    </div>
+</div>
+
+
+
+
+</form>
+
+
+
+<div class="footer">
+    <div class="h55"></div>
+    <ul class="ul-tabbar">
+        <li class="on">
+            <a href="index.html">
+                <i class="i1"></i>
+                <span class="txt">Home</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="transaction.html">
+                <i class="i2"></i>
+                <span class="txt">Transaction</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="my-team.html">
+                <i class="i3"></i>
+                <span class="txt">My team</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="my.html">
+                <i class="i5"></i>
+                <span class="txt">My</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script>
+    function showMsg(msg){
+        layer.msg(msg);
+    }
+</script>
+</div>
+</div>
+
+<script>
+    var i=0;
+    function xiazhu(id,ctype){
+        $("#tiaozi"+i).removeClass("biaoshi");
+        $("#tiaozi"+id).addClass("biaoshi");
+        i=id;
+        layer.open({
+            type: 2,
+            closeBtn: 1,
+            title: 'Trading information',
+            shadeClose: true,
+            shade: 0.4,
+            anim: 1,
+            area: ['90%', '500px'],
+            isOutAnim: false,
+            content: '/index/saishi/buy.html'+"?id="+id+"&ctype="+ctype,
+        });
+    }
+     $('#zfs').change(function(){
+        
+        window.location.href='/index/saishi/one.html'+'?ctype='+$('#zfs').val()+"&id="+$('#cId').val();
+
+    })
+</script>
+</body>
+
+</html>
